@@ -1,8 +1,8 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
 
 .math-content {
   margin: 5em auto 0;
-  padding: 1em;
+  padding: 2em;
   border: solid 2px #c0c0c0;
   background-color: hsl(0, 0%, 96%);
   width: 80%;
@@ -12,22 +12,28 @@
   width: 20%;
   padding: 1em;
   border: solid 1px #663399;
+  box-sizing: border-box;
 }
+
 .title {
   color: #663399;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
 }
 
 .bi-triangle-fill {
   color: #663399;
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .description {
-  
+  font-size: 16px;
 }
-
+.formule {
+  font-size: 18px;
+  font-style: oblique;
+  color: #663399;
+}
 #triangle-area label {
   display: block;
 }
@@ -35,7 +41,27 @@
 #triangle-area input {
   border: none;
   margin: 5px;
+  padding: 5px;
   box-shadow: 4px 4px 2px #c0c0c0;
   border-radius: 5px;
+  text-indent: 10px;
+}
+#show {
+  color: #663399;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+#triangle-area button {
+  color: #fff;
+  background-color: #5f5fd6;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
 }
 
+#triangle-area button:hover {
+  background-color: #3434d4;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px #c0c0c0;
+}
