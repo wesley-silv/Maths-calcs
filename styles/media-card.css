@@ -46,14 +46,14 @@
 #media-area input:focus {
   outline: none;
 }
-#show {
-  color: #663399;
+#media-show {
+  color: #000080;
   background-color: #f0f0f0;
   padding: 5px;
 }
 #media-area button {
   color: #fff;
-  background-color: #5f5fd6;
+  background-color: #3333c8;
   padding: 7px;
   border: none;
   border-radius: 5px;
@@ -61,7 +61,7 @@
 }
 
 #media-area button:hover {
-  background-color: #3434d4;
+  background-color: #000080;
   cursor: pointer;
   box-shadow: 2px 2px 2px #c0c0c0;
 }

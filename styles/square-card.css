@@ -46,14 +46,14 @@
 #square-area input:focus {
   outline: none;
 }
-#show {
-  color: #663399;
+#square-show {
+  color: #365a36;
   background-color: #f0f0f0;
   padding: 5px;
 }
 #square-area button {
   color: #fff;
-  background-color: #5f5fd6;
+  background-color: #589b58;
   padding: 7px;
   border: none;
   border-radius: 5px;
@@ -61,7 +61,7 @@
 }
 
 #square-area button:hover {
-  background-color: #3434d4;
+  background-color: #365a36;
   cursor: pointer;
   box-shadow: 2px 2px 2px #c0c0c0;
 }
