@@ -1,36 +1,33 @@
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
-
-.math-content {
-  margin: 5em auto 0;
-  padding: 2em;
-  border: solid 2px #c0c0c0;
-  background-color: hsl(0, 0%, 96%);
-  width: 80%;
-}
 #triangle-area {
   text-align: center;
-  width: 20%;
-  padding: 1em;
-  border: solid 1px #663399;
+  width: 25%;
+  padding: 2em 1em;
+  box-shadow: 2px 2px 5px #c0c0c0;
   box-sizing: border-box;
 }
 
-.title {
+#triangle-area:hover {
+  box-shadow: 2px 2px 5px #5f5fd6;
+}
+
+#triangle-area .title {
   color: #663399;
   font-size: 24px;
   font-weight: bold;
+  margin: 1em auto;
 }
 
 .bi-triangle-fill {
+  font-size: 32px;
   color: #663399;
-  font-size: 36px;
 }
 
-.description {
+#triangle-area .description {
   font-size: 16px;
 }
-.formule {
+#triangle-area .formule {
   font-size: 18px;
+  font-weight: bold;
   font-style: oblique;
   color: #663399;
 }
@@ -42,9 +39,23 @@
   border: none;
   margin: 5px;
   padding: 5px;
-  box-shadow: 4px 4px 2px #c0c0c0;
+  box-shadow: 2px 2px 2px #c0c0c0;
   border-radius: 5px;
-  text-indent: 10px;
+  text-indent: 0.5em;
+}
+
+#triangle-area input:focus {
+  outline: 0;
+}
+
+#triagle-area input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#triagle-area input:checked {
+  visibility: collapse;
 }
 #show {
   color: #663399;
@@ -63,5 +74,5 @@
 #triangle-area button:hover {
   background-color: #3434d4;
   cursor: pointer;
-  box-shadow: 4px 4px 4px #c0c0c0;
+  box-shadow: 2px 2px 2px #c0c0c0;
 }

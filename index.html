@@ -4,19 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-    <title>Maths wiht JavaScript</title>
+    <title>Maths</title>
   </head>
   <body>
+    <h1>Maths</h1>
+    <hr />
     <div class="math-content">
       <section id="triangle-area">
-        <h4 class="title">Área do triângulo</h4>
+        <h4 class="title">Triângulo</h4>
+        <p class="description">Calcule a área do triângulo</p>
         <i class="bi bi-triangle-fill"></i>
-        <p class="description">
-          Insira os valores para calcular a área do triângulo
-        </p>
-        <p class="formule">
-          área = (b x a) / 2
-        </p>
+        <p class="formule">Área = (b x a) / 2</p>
         <label for="base-triangle">Base</label>
         <input
           type="number"
@@ -33,6 +31,76 @@
         />
         <p id="show"></p>
         <button id="result-triangle">Resultado</button>
+      </section>
+
+      <section id="circle-area">
+        <h4 class="title">Circulo</h4>
+        <p class="description">Calcule a área do circulo</p>
+        <i class="bi bi-circle-fill"></i>
+        <p class="formule">Área = (&#960; x r²)</p>
+        <label for="pi-circle">Pi</label>
+        <input
+          type="number"
+          name="pi-circle"
+          id="pi-circle"
+          placeholder="O valor de &#960; é 3.14"
+          value="3.14"
+        />
+        <label for="ray-circle">Raio</label>
+        <input
+          type="number"
+          name="ray-circle"
+          id="ray-circle"
+          placeholder="Digite o valor do raio"
+        />
+        <p id="show"></p>
+        <button id="result-circle">Resultado</button>
+      </section>
+
+      <section id="square-area">
+        <h4 class="title">Quadrado</h4>
+        <p class="description">Calcule a área do quadrado</p>
+        <i class="bi bi-square-fill"></i>
+        <p class="formule">Área = (b²)</p>
+        <label for="pi-square">B²</label>
+        <input
+          type="number"
+          name="pi-square"
+          id="pi-square"
+          placeholder="Digite o valor da base"
+        />
+        <label for="base-square">Base</label>
+        <input
+          type="number"
+          name="base-square"
+          id="base-square"
+          placeholder="Digite o valor do raio"
+        />
+        <p id="show"></p>
+        <button id="result-square">Resultado</button>
+      </section>
+
+      <section id="media-area">
+        <h4 class="title">Média</h4>
+        <p class="description">Calcule o valor da média</p>
+        <i class="bi bi-aspect-ratio-fill"></i>
+        <p class="formule">Média = (x1 + xn) / n</p>
+        <label for="pi-media">Valor</label>
+        <input
+          type="number"
+          name="media"
+          id="media"
+          placeholder="Digite o valor"
+        />
+        <label for="base-media">Quantidade</label>
+        <input
+          type="number"
+          name="base-media"
+          id="base-media"
+          placeholder="Digite o valor do raio"
+        />
+        <p id="show"></p>
+        <button id="result-media">Resultado</button>
       </section>
     </div>
   </body>

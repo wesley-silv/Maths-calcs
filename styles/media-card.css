@@ -1,0 +1,67 @@
+#media-area {
+  text-align: center;
+  width: 25%;
+  padding: 2em 1em;
+  box-shadow: 2px 2px 5px #c0c0c0;
+  box-sizing: border-box;
+}
+
+#media-area:hover {
+  box-shadow: 2px 2px 4px #000080;
+}
+
+#media-area .title {
+  color: #000080;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 1em auto;
+}
+
+.bi-aspect-ratio-fill {
+  font-size: 32px;
+  color: #000080;
+}
+
+#media-area .description {
+  font-size: 16px;
+}
+#media-area .formule {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: oblique;
+  color: #000080;
+}
+#media-area label {
+  display: block;
+}
+
+#media-area input {
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px #c0c0c0;
+  border-radius: 5px;
+  text-indent: 0.5em;
+}
+#media-area input:focus {
+  outline: none;
+}
+#show {
+  color: #663399;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+#media-area button {
+  color: #fff;
+  background-color: #5f5fd6;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+}
+
+#media-area button:hover {
+  background-color: #3434d4;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #c0c0c0;
+}

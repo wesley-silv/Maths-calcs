@@ -9,7 +9,7 @@ function triangle() {
   if (area <= 0) {
     let showArea = (document.getElementById(
       'show'
-    ).innerHTML = `Preencha os capos para obter o valor da área em m²`)
+    ).innerHTML = `Preencha os campos para obter o valor da área em m²`)
   } else {
     let showArea = (document.getElementById(
       'show'
