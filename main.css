@@ -11,6 +11,7 @@ html, body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
 }
 
 h1 {
@@ -30,8 +31,16 @@ hr {
   display: flex;
   gap: 24px;
   margin: 3em auto 0;
+  margin-bottom: 5rem;
   padding: 4em;
-  background-color: #f5f5f5;
+  background-color: #f7f7f7;
   border: dotted 1px #c0c0c0;
-  width: 80%;
+  width: 88%;
+}
+
+@media screen and (max-width: 768px) {
+  .math-content {
+    display: flex;
+    flex-direction: column;
+  }
 }
