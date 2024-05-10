@@ -39,7 +39,7 @@ squareArea.addEventListener('click', square)
 
 function square() {
   let base = document.getElementById('base-square').value
-  let area = (base * base)
+  let area = base * base
   if (area <= 0) {
     let showArea = (document.getElementById(
       'square-show'
@@ -55,10 +55,10 @@ let mediaArea = document.getElementById('result-media')
 mediaArea.addEventListener('click', media)
 
 function media() {
-  let totalVelues = document.getElementById('values').value
+  let totalValues = document.getElementById('values').value
   let quantities = document.getElementById('quantities').value
-  let media = totalVelues / quantities
-  if (media <= 0) {
+  let media = Number(totalValues / quantities)
+  if (media <= 0 ) {
     let showArea = (document.getElementById(
       'media-show'
     ).innerHTML = `Preencha os campos para obter o valor da média`)
