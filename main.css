@@ -5,9 +5,8 @@
 @import url(./styles/square-card.css);
 @import url(./styles/media-card.css);
 
-
-
-html, body{
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,18 +28,18 @@ hr {
 
 .math-content {
   display: flex;
-  gap: 24px;
+  gap: 1.2rem;
   margin: 3em auto 0;
   margin-bottom: 5rem;
   padding: 4em;
   background-color: #f7f7f7;
-  border: dotted 1px #c0c0c0;
-  width: 88%;
+  border-left: solid 0.8rem hsla(240, 100%, 25%, 0.8);
 }
 
 @media screen and (max-width: 768px) {
   .math-content {
     display: flex;
     flex-direction: column;
+    border: none;
   }
 }
