@@ -4,6 +4,7 @@
 @import url(./styles/circle-card.css);
 @import url(./styles/square-card.css);
 @import url(./styles/media-card.css);
+@import url(./styles/imc-card.css);
 
 html,
 body {
@@ -26,14 +27,13 @@ hr {
   box-shadow: 4px 4px 5px #c0c0c0;
 }
 
-.math-content {
+.math-content, .math-content-two {
   display: flex;
   gap: 1.2rem;
   margin: 3em auto 0;
   margin-bottom: 5rem;
   padding: 4em;
   background-color: #f7f7f7;
-  border-left: solid 0.8rem hsla(240, 100%, 25%, 0.8);
 }
 
 @media screen and (max-width: 768px) {

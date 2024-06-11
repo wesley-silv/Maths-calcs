@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-    <title>Matemáticas</title>
+    <title>Fórmulas Matemáticas</title>
   </head>
   <body>
-    <h1>Matemáticas</h1>
+    <h1>Fórmulas Matemáticas</h1>
     <hr />
     <div class="math-content">
       <section id="triangle-area">
@@ -96,7 +96,30 @@
         <button id="result-media">Resultado</button>
       </section>
     </div>
-    
+    <div class="math-content-two">
+      <section id="imc-area">
+        <h4 class="title">Índice de massa corporal</h4>
+        <p class="description">Calcule o índice de massa corporal</p>
+        <i class="bi bi-person-fill"></i>
+        <p class="formule">IMC = (m / a²)</p>
+        <label for="mass">Massa</label>
+        <input
+          type="number"
+          name="mass"
+          id="mass"
+          placeholder="Digite a massa (mm)"
+        />
+        <label for="height">Altura</label>
+        <input
+          type="number"
+          name="height"
+          id="height"
+          placeholder="Digite o peso (Kg)"
+        />
+        <p id="imc-show"></p>
+        <button id="result-imc">Resultado</button>
+      </section>
+    </div>
   </body>
   <script src="main.js"></script>
 </html>

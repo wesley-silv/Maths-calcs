@@ -1,11 +1,13 @@
 # Project Maths JavaScript
 
-> This project is a teplate simple created using the JavaScript, HTML, CSS and the framawrk Bootstrap.
+This project is a teplate simple created using the JavaScript, HTML, CSS and the framawrk Bootstrap.
 
 ## Description
 
 This project was created to playing with language JavaScript and apply some concepts learn with my studies.
 The your main function is colete values and execute math calcs and show result in the layout.
+
+## Index
 
 ## Technologies
 
@@ -13,3 +15,5 @@ The your main function is colete values and execute math calcs and show result i
 - CSS
 - JavaScript
 - Bootstrap
+
+
