@@ -57,8 +57,8 @@ mediaArea.addEventListener('click', media)
 function media() {
   let totalValues = document.getElementById('values').value
   let quantities = document.getElementById('quantities').value
-  let media = Number(totalValues / quantities)
-  if (media <= 0 ) {
+  let media = totalValues / quantities
+  if (media <= 0) {
     let showArea = (document.getElementById(
       'media-show'
     ).innerHTML = `Preencha os campos para obter o valor da média`)
@@ -66,5 +66,23 @@ function media() {
     let showArea = (document.getElementById(
       'media-show'
     ).innerHTML = `O valor da Média é igual: ${media}`)
+  }
+}
+
+let imcArea = document.getElementById('result-imc')
+imcArea.addEventListener('click', imc)
+
+function imc() {
+  let mass = document.getElementById('mass').value
+  let height = document.getElementById('height').value
+  let imc = mass / (height * height)
+  if (imc <= 0) {
+    let showArea = (document.getElementById(
+      'imc-show'
+    ).innerHTML = `Preencha os campos para obter o valor do índice de massa corporal`)
+  } else {
+    let showArea = (document.getElementById(
+      'imc-show'
+    ).innerHTML = `O valor do IMC é igual: ${parseInt(imc)}`)
   }
 }
