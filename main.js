@@ -1,3 +1,4 @@
+// Old code
 let triagleArea = document.getElementById('result-triangle')
 triagleArea.addEventListener('click', triangle)
 

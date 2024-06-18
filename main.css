@@ -6,40 +6,111 @@
 @import url(./styles/media-card.css);
 @import url(./styles/imc-card.css);
 
-html,
-body {
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffc107;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --border-radius: 8px;
+  --font-family: 'Arial', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h1 {
-  text-align: center;
-  color: #4a4aaf;
-  text-shadow: 4px 4px 5px #c0c0c0;
-  letter-spacing: 8px;
+  font-size: 2.5em;
+  color: var(--primary-color);
 }
 
 hr {
-  border: solid 2px #4a4aaf;
-  width: 320px;
-  box-shadow: 4px 4px 5px #c0c0c0;
+  border: 1px solid var(--primary-color);
+  width: 50%;
+  margin: 0 auto;
 }
 
-.math-content, .math-content-two {
+.math-content {
   display: flex;
-  gap: 1.2rem;
-  margin: 3em auto 0;
-  margin-bottom: 5rem;
-  padding: 4em;
-  background-color: #f7f7f7;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+section {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.title {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.formula {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+p {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
   .math-content {
-    display: flex;
     flex-direction: column;
-    border: none;
+    align-items: center;
   }
 }

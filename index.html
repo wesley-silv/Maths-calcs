@@ -3,123 +3,131 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="main.css" />
     <title>Fórmulas Matemáticas</title>
   </head>
   <body>
-    <h1>Fórmulas Matemáticas</h1>
-    <hr />
-    <div class="math-content">
-      <section id="triangle-area">
-        <h4 class="title">Triângulo</h4>
-        <p class="description">Calcule a área do triângulo</p>
-        <i class="bi bi-triangle-fill"></i>
-        <p class="formule">Área = (b x a) / 2</p>
-        <label for="base-triangle">Base</label>
-        <input
-          type="number"
-          name="base-triangle"
-          id="base-triangle"
-          placeholder="Digite o valor da base"
-        />
-        <label for="height-triangle">Altura</label>
-        <input
-          type="number"
-          name="height-triangle"
-          id="height-triangle"
-          placeholder="Digite o valor da altura"
-        />
-        <p id="show"></p>
-        <button id="result-triangle">Resultado</button>
-      </section>
+    <header>
+      <h1>Fórmulas Matemáticas</h1>
+      <hr />
+    </header>
+    <main>
+      <div class="math-content">
+        <section id="triangle-area">
+          <h4 class="title">Triângulo</h4>
+          <p class="description">Calcule a área do triângulo</p>
+          <i class="bi bi-triangle-fill"></i>
+          <p class="formula">Área = (b x a) / 2</p>
+          <label for="base-triangle">Base</label>
+          <input
+            type="number"
+            name="base-triangle"
+            id="base-triangle"
+            placeholder="Digite o valor da base"
+          />
+          <label for="height-triangle">Altura</label>
+          <input
+            type="number"
+            name="height-triangle"
+            id="height-triangle"
+            placeholder="Digite o valor da altura"
+          />
+          <p id="show"></p>
+          <button id="result-triangle">Resultado</button>
+        </section>
 
-      <section id="circle-area">
-        <h4 class="title">Circulo</h4>
-        <p class="description">Calcule a área do circulo</p>
-        <i class="bi bi-circle-fill"></i>
-        <p class="formule">Área = (&#960; x r²)</p>
-        <label for="pi-circle">Pi</label>
-        <input
-          type="number"
-          name="pi-circle"
-          id="pi-circle"
-          placeholder="O valor de &#960; é 3.14"
-          value="3.14"
-        />
-        <label for="ray-circle">Raio</label>
-        <input
-          type="number"
-          name="ray-circle"
-          id="ray-circle"
-          placeholder="Digite o valor do raio"
-        />
-        <p id="circle-show"></p>
-        <button id="result-circle">Resultado</button>
-      </section>
+        <section id="circle-area">
+          <h4 class="title">Círculo</h4>
+          <p class="description">Calcule a área do círculo</p>
+          <i class="bi bi-circle-fill"></i>
+          <p class="formula">Área = (&#960; x r²)</p>
+          <label for="pi-circle">Pi</label>
+          <input
+            type="number"
+            name="pi-circle"
+            id="pi-circle"
+            placeholder="O valor de &#960; é 3.14"
+            value="3.14"
+          />
+          <label for="ray-circle">Raio</label>
+          <input
+            type="number"
+            name="ray-circle"
+            id="ray-circle"
+            placeholder="Digite o valor do raio"
+          />
+          <p id="circle-show"></p>
+          <button id="result-circle">Resultado</button>
+        </section>
 
-      <section id="square-area">
-        <h4 class="title">Quadrado</h4>
-        <p class="description">Calcule a área do quadrado</p>
-        <i class="bi bi-square-fill"></i>
-        <p class="formule">Área = (b²)</p>
-        <label for="base-square">Base</label>
-        <input
-          type="number"
-          name="base-square"
-          id="base-square"
-          placeholder="Digite o valor da base"
-        />
-        <p id="square-show"></p>
-        <button id="result-square">Resultado</button>
-      </section>
+        <section id="square-area">
+          <h4 class="title">Quadrado</h4>
+          <p class="description">Calcule a área do quadrado</p>
+          <i class="bi bi-square-fill"></i>
+          <p class="formula">Área = (b²)</p>
+          <label for="base-square">Base</label>
+          <input
+            type="number"
+            name="base-square"
+            id="base-square"
+            placeholder="Digite o valor da base"
+          />
+          <p id="square-show"></p>
+          <button id="result-square">Resultado</button>
+        </section>
 
-      <section id="media-area">
-        <h4 class="title">Média</h4>
-        <p class="description">Calcule o valor da média</p>
-        <i class="bi bi-aspect-ratio-fill"></i>
-        <p class="formule">Média = (x1 + xn) / n</p>
-        <label for="values">Valores</label>
-        <input
-          type="number"
-          name="values"
-          id="values"
-          placeholder="Digite o valor somado"
-        />
-        <label for="quantities">Quantidades</label>
-        <input
-          type="number"
-          name="quantities"
-          id="quantities"
-          placeholder="Digite as quantidades"
-        />
-        <p id="media-show"></p>
-        <button id="result-media">Resultado</button>
-      </section>
-    </div>
-    <div class="math-content-two">
-      <section id="imc-area">
-        <h4 class="title">Índice de massa corporal</h4>
-        <p class="description">Calcule o índice de massa corporal</p>
-        <i class="bi bi-person-fill"></i>
-        <p class="formule">IMC = (m / a²)</p>
-        <label for="mass">Massa</label>
-        <input
-          type="number"
-          name="mass"
-          id="mass"
-          placeholder="Digite a massa (mm)"
-        />
-        <label for="height">Altura</label>
-        <input
-          type="number"
-          name="height"
-          id="height"
-          placeholder="Digite o peso (Kg)"
-        />
-        <p id="imc-show"></p>
-        <button id="result-imc">Resultado</button>
-      </section>
-    </div>
+        <section id="media-area">
+          <h4 class="title">Média</h4>
+          <p class="description">Calcule o valor da média</p>
+          <i class="bi bi-aspect-ratio-fill"></i>
+          <p class="formula">Média = (x1 + xn) / n</p>
+          <label for="values">Valores</label>
+          <input
+            type="number"
+            name="values"
+            id="values"
+            placeholder="Digite o valor somado"
+          />
+          <label for="quantities">Quantidades</label>
+          <input
+            type="number"
+            name="quantities"
+            id="quantities"
+            placeholder="Digite as quantidades"
+          />
+          <p id="media-show"></p>
+          <button id="result-media">Resultado</button>
+        </section>
+      </div>
+      <div class="math-content">
+        <section id="imc-area">
+          <h4 class="title">Índice de Massa Corporal</h4>
+          <p class="description">Calcule o índice de massa corporal</p>
+          <i class="bi bi-person-fill"></i>
+          <p class="formula">IMC = (m / a²)</p>
+          <label for="mass">Massa</label>
+          <input
+            type="number"
+            name="mass"
+            id="mass"
+            placeholder="Digite a massa (kg)"
+          />
+          <label for="height">Altura</label>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            placeholder="Digite a altura (m)"
+          />
+          <p id="imc-show"></p>
+          <button id="result-imc">Resultado</button>
+        </section>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
   </body>
-  <script src="main.js"></script>
 </html>
