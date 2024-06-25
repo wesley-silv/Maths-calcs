@@ -1,10 +1,9 @@
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
-
 @import url(./styles/triangle-card.css);
 @import url(./styles/circle-card.css);
 @import url(./styles/square-card.css);
 @import url(./styles/media-card.css);
 @import url(./styles/imc-card.css);
+@import url(./styles/percent-card.css);
 
 :root {
   --primary-color: #4caf50;
