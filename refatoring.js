@@ -33,3 +33,19 @@ document.getElementById('result-imc').addEventListener('click', function () {
   const imc = mass / Math.pow(height, 2)
   document.getElementById('imc-show').innerText = `IMC: ${imc}`
 })
+
+document
+  .getElementById('result-percent')
+  .addEventListener('click', function () {
+    const value = parseFloat(document.getElementById('value').value)
+    const percentValue = parseFloat(document.getElementById('percent').value)
+
+    if (isNaN(value) || isNaN(percentValue)) {
+      alert('Por favor, insira valores numéricos válidos.')
+      return
+    }
+    const percent = (value / 100) * percentValue
+    document.getElementById(
+      'percent-show'
+    ).innerText = `Porcentagem: ${percent}`
+  })
