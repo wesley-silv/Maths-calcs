@@ -41,7 +41,7 @@ document
     const percentValue = parseFloat(document.getElementById('percent').value)
 
     if (isNaN(value) || isNaN(percentValue)) {
-      alert('Por favor, insira valores numéricos válidos.')
+      alert('Insira valores numéricos válidos!')
       return
     }
     const percent = (value / 100) * percentValue
