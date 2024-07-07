@@ -6,7 +6,7 @@ function triangle() {
   let base = document.getElementById('base-triangle').value
   let height = document.getElementById('height-triangle').value
   let area = (base * height) / 2
-  if (area <= 0) {
+  if (area <= 0) { 
     let showArea = (document.getElementById(
       'show'
     ).innerHTML = `Preencha os campos para obter o valor da área em m²`)
@@ -73,7 +73,7 @@ function media() {
 let imcArea = document.getElementById('result-imc')
 imcArea.addEventListener('click', imc)
 
-function imc() {
+function imc() { 
   let mass = document.getElementById('mass').value
   let height = document.getElementById('height').value
   let imc = mass / (height * height)
