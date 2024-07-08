@@ -1,0 +1,159 @@
+#triangle-area,
+#circle-area,
+#square-area,
+#media-area,
+#imc-area,
+#percent-area {
+  text-align: center;
+  width: 25%;
+  padding: 2em 1em;
+  margin: 1em auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+#triangle-area:hover,
+#circle-area:hover,
+#square-area:hover,
+#media-area:hover,
+#imc-area:hover,
+#percent-area:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+#triangle-area .title,
+#circle-area .title,
+#square-area .title,
+#media-area .title,
+#imc-area .title,
+#percent-area .title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bi-triangle-fill,
+.bi-circle-fill,
+.bi-square-fill,
+.bi-aspect-ratio-fill,
+.bi-person-fill,
+.bi-percent {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+#triangle-area .description,
+#circle-area .description,
+#square-area .description,
+#media-area .description,
+#imc-area .description,
+#percent-area .description {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+#triangle-area .formula,
+#circle-area .formula,
+#square-area .formula,
+#media-area .formula,
+#imc-area .formula,
+#percent-area .formula {
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: oblique;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#triangle-area label,
+#circle-area label,
+#square-area label,
+#media-area label,
+#imc-area label,
+#percent-area label {
+  display: block;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+#triangle-area input {
+  width: calc(100% - 1em);
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease;
+}
+
+#show,
+#circle-show,
+#square-show,
+#media-show,
+#imc-show,
+#percent-show {
+  background-color: #f9f9f9;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin-top: 1em;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#triangle-area button,
+#cicle-area button,
+#square-area button,
+#media-area button,
+#imc-area button,
+#percent-area button {
+  color: #fff;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#triangle-area button:hover,
+#circle-area button:hover,
+#square-area button:hover,
+#media-area button:hover,
+#imc-area button:hover,
+#percent-area button:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  #triangle-area,
+  #circle-area,
+  #square-area,
+  #media-area,
+  #imc-area,
+  #percent-area {
+    width: 80%;
+    padding: 1.5em;
+  }
+
+  #triangle-area .title,
+  #circle-area .title,
+  #square-area .title,
+  #media-area .title,
+  #imc-area,
+  .title #percent-area .title {
+    font-size: 1.2em;
+  }
+
+  #triangle-area .formule,
+  #circle-area .title,
+  #square-area .title,
+  #media-area .title,
+  #imc-area .title,
+  #percent-area .title {
+    font-size: 1em;
+  }
+}

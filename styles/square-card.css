@@ -1,62 +1,13 @@
-#square-area {
-  text-align: center;
-  width: 25%;
-  padding: 2em 1em;
-  margin: 1em auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  box-sizing: border-box;
-}
-
-#square-area:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
-
 #square-area .title {
   color: #365a36;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 0.5em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .bi-square-fill {
-  font-size: 2em;
   color: #365a36;
-  margin-bottom: 0.5em;
-}
-
-#square-area .description {
-  font-size: 1em;
-  margin-bottom: 1em;
 }
 
 #square-area .formula {
-  font-size: 1.2em;
-  font-weight: bold;
-  font-style: oblique;
   color: #365a36;
-  margin-bottom: 1em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-#square-area label {
-  display: block;
-  margin: 0.5em 0;
-  font-weight: bold;
-}
-
-#square-area input {
-  width: calc(100% - 1em);
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  transition: border 0.3s ease;
 }
 
 #square-area input:focus {
@@ -66,40 +17,12 @@
 
 #square-show {
   color: #365a36;
-  background-color: #f9f9f9;
-  padding: 0.5em;
-  border-radius: 5px;
-  margin-top: 1em;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 #square-area button {
-  color: #fff;
   background-color: #589b58;
-  padding: 0.7em 1em;
-  border: none;
-  border-radius: 5px;
-  margin-top: 1em;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #square-area button:hover {
   background-color: #365a36;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 768px) {
-  #square-area {
-    width: 80%;
-    padding: 1.5em;
-  }
-
-  #square-area .title {
-    font-size: 1.2em;
-  }
-
-  #square-area .formula {
-    font-size: 1em;
-  }
 }

@@ -1,62 +1,13 @@
-#media-area {
-  text-align: center;
-  width: 25%;
-  padding: 2em 1em;
-  margin: 1em auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  box-sizing: border-box;
-}
-
-#media-area:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
-
 #media-area .title {
   color: #000080;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-bottom: 0.5em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .bi-aspect-ratio-fill {
-  font-size: 2em;
   color: #000080;
-  margin-bottom: 0.5em;
-}
-
-#media-area .description {
-  font-size: 1em;
-  margin-bottom: 1em;
 }
 
 #media-area .formula {
-  font-size: 1.2em;
-  font-weight: bold;
-  font-style: oblique;
   color: #000080;
-  margin-bottom: 1em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-#media-area label {
-  display: block;
-  margin: 0.5em 0;
-  font-weight: bold;
-}
-
-#media-area input {
-  width: calc(100% - 1em);
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  transition: border 0.3s ease;
 }
 
 #media-area input:focus {
@@ -76,40 +27,12 @@
 
 #media-show {
   color: #000080;
-  background-color: #f9f9f9;
-  padding: 0.5em;
-  border-radius: 5px;
-  margin-top: 1em;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 #media-area button {
-  color: #fff;
   background-color: #3333c8;
-  padding: 0.7em 1em;
-  border: none;
-  border-radius: 5px;
-  margin-top: 1em;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #media-area button:hover {
   background-color: #000080;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 768px) {
-  #media-area {
-    width: 80%;
-    padding: 1.5em;
-  }
-
-  #media-area .title {
-    font-size: 1.2em;
-  }
-
-  #media-area .formule {
-    font-size: 1em;
-  }
 }
