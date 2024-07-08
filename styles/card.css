@@ -81,7 +81,12 @@
   font-weight: bold;
 }
 
-#triangle-area input {
+#triangle-area input,
+#circle-area input,
+#square-area input,
+#media-area input,
+#imc-area input,
+#percent-area input {
   width: calc(100% - 1em);
   padding: 0.5em;
   margin-bottom: 1em;
