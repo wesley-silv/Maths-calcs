@@ -3,29 +3,30 @@ document
   .addEventListener('click', function () {
     const base = parseFloat(document.getElementById('base-triangle').value)
     const height = parseFloat(document.getElementById('height-triangle').value)
-    const area = (base * height) / 2
-    if (area > 0) {
-      document.getElementById('show').innerText = `Área: ${area}`
-    } else {
-      document
+
+    if (isNaN(base) || isNaN(height)) {
       alert('Insira valores numéricos válidos!')
+      return
     }
+    const area = (base * height) / 2
+    document.getElementById('show').innerText = `Área: ${area}`
   })
 
 document.getElementById('result-circle').addEventListener('click', function () {
   const pi = parseFloat(document.getElementById('pi-circle').value)
   const radius = parseFloat(document.getElementById('ray-circle').value)
-  const area = pi * Math.pow(radius, 2)
-  if (area > 0) {
-    document.getElementById('circle-show').innerText = `Área: ${area}`
-  } else {
-    document
+
+  if (isNaN(pi) || isNaN(radius)) {
     alert('Insira valores numéricos válidos!')
+    return
   }
+  const area = pi * Math.pow(radius, 2)
+  document.getElementById('circle-show').innerText = `Área: ${area}`
 })
 
 document.getElementById('result-square').addEventListener('click', function () {
   const base = parseFloat(document.getElementById('base-square').value)
+
   if (isNaN(base)) {
     alert('Insira valores numéricos válidos!')
     return
@@ -37,6 +38,11 @@ document.getElementById('result-square').addEventListener('click', function () {
 document.getElementById('result-media').addEventListener('click', function () {
   const values = parseFloat(document.getElementById('values').value)
   const quantities = parseFloat(document.getElementById('quantities').value)
+
+  if (isNaN(values) || isNaN(quantities)) {
+    alert('Insira valores numéricos válidos!')
+    return
+  }
   const mean = values / quantities
   document.getElementById('media-show').innerText = `Média: ${mean}`
 })
@@ -44,6 +50,11 @@ document.getElementById('result-media').addEventListener('click', function () {
 document.getElementById('result-imc').addEventListener('click', function () {
   const mass = parseFloat(document.getElementById('mass').value)
   const height = parseFloat(document.getElementById('height').value)
+
+  if (isNaN(mass) || isNaN(height)) {
+    alert('Insira valores numéricos válidos!')
+    return
+  }
   const imc = mass / Math.pow(height, 2)
   document.getElementById('imc-show').innerText = `IMC: ${imc}`
 })
