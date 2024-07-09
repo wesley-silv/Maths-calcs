@@ -110,7 +110,7 @@
 }
 
 #triangle-area button,
-#cicle-area button,
+#circle-area button,
 #square-area button,
 #media-area button,
 #imc-area button,
@@ -148,17 +148,17 @@
   #circle-area .title,
   #square-area .title,
   #media-area .title,
-  #imc-area,
-  .title #percent-area .title {
-    font-size: 1.2em;
-  }
-
-  #triangle-area .formule,
-  #circle-area .title,
-  #square-area .title,
-  #media-area .title,
   #imc-area .title,
   #percent-area .title {
+    font-size: 1.4em;
+  }
+
+  #triangle-area .formula,
+  #circle-area .formula,
+  #square-area .formula,
+  #media-area .formula,
+  #imc-area .formula,
+  #percent-area .formula {
     font-size: 1em;
   }
 }
