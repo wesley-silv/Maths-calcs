@@ -1,13 +1,8 @@
-#triangle-area .title {
-  color: #663399;
-}
-
-.bi-triangle-fill {
-  color: #663399;
-}
-
-#triangle-area .formula {
-  color: #663399;
+#triangle-area .title,
+.bi-triangle-fill,
+#triangle-area .formula,
+#show {
+  color: var(--purple-design);
 }
 
 #triangle-area input:focus {
@@ -23,10 +18,6 @@
 
 #triangle-area input:checked {
   visibility: collapse;
-}
-
-#show {
-  color: #663399;
 }
 
 #triangle-area button {
