@@ -1,22 +1,13 @@
-#circle-area .title {
-  color: #b64e17;
-}
-
-.bi-circle-fill {
-  color: #b64e17;
-}
-
-#circle-area .formula {
-  color: #b64e17;
+#circle-area .title,
+.bi-circle-fill,
+#circle-area .formula,
+#circle-show {
+  color: var(--red-design);
 }
 
 #circle-area input:focus {
   outline: none;
   border-color: #b64e17;
-}
-
-#circle-show {
-  color: #c66937;
 }
 
 #circle-area button {
