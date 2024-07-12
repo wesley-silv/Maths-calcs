@@ -14,6 +14,10 @@
   background-color: #589b58;
 }
 
+#square-show {
+  margin-top: 92px;
+}
+
 #square-area button:hover {
   background-color: #365a36;
 }

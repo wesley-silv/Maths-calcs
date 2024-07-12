@@ -95,7 +95,6 @@ input[type='number'] {
 }
 
 button {
-  background-color: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: var(--border-radius);
