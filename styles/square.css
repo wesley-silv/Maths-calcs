@@ -1,13 +1,8 @@
-#square-area .title {
-  color: #365a36;
-}
-
-.bi-square-fill {
-  color: #365a36;
-}
-
-#square-area .formula {
-  color: #365a36;
+#square-area .title,
+.bi-square-fill,
+#square-area .formula,
+#square-show {
+  color: var(--green-design);
 }
 
 #square-area input:focus {
@@ -15,12 +10,12 @@
   border-color: #365a36;
 }
 
-#square-show {
-  color: #365a36;
-}
-
 #square-area button {
   background-color: #589b58;
+}
+
+#square-show {
+  margin-top: 92px;
 }
 
 #square-area button:hover {

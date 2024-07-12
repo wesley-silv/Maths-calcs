@@ -1,0 +1,19 @@
+#percent-area .title,
+.bi-percent,
+#percent-area .formula,
+#percent-show {
+  color: var(--orange-design);
+}
+
+#percent-area input:focus {
+  outline: none;
+  border-color: var(--orange-design);
+}
+
+#percent-area button {
+  background-color: var(--orange-design);
+}
+
+#percent-area button:hover {
+  background-color: #d6b230;
+}
