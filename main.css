@@ -1,3 +1,5 @@
+@import url(./styles/navbar.css);
+
 @import url(./styles/card.css);
 @import url(./styles/triangle.css);
 @import url(./styles/circle.css);
@@ -30,7 +32,6 @@ body {
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 1.2rem;
 }
 
 header {
