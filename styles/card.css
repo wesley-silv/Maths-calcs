@@ -110,7 +110,8 @@
 #media-show,
 #imc-show,
 #percent-show,
-#risk-analysis-show {
+#risk-analysis-show,
+#risk-analysis-total {
   background-color: #f9f9f9;
   padding: 0.5em;
   border-radius: 5px;
