@@ -3,7 +3,8 @@
 #square-area,
 #media-area,
 #imc-area,
-#percent-area {
+#percent-area,
+#risk-analysis-area {
   text-align: center;
   width: 25%;
   padding: 2em 1em;
@@ -20,7 +21,8 @@
 #square-area:hover,
 #media-area:hover,
 #imc-area:hover,
-#percent-area:hover {
+#percent-area:hover,
+#risk-analysis-area:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
@@ -30,7 +32,8 @@
 #square-area .title,
 #media-area .title,
 #imc-area .title,
-#percent-area .title {
+#percent-area .title,
+#risk-analysis-area .title {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -42,7 +45,8 @@
 .bi-square-fill,
 .bi-aspect-ratio-fill,
 .bi-person-fill,
-.bi-percent {
+.bi-percent,
+.bi-graph-down-arrow {
   font-size: 2em;
   margin-bottom: 0.5em;
 }
@@ -52,7 +56,8 @@
 #square-area .description,
 #media-area .description,
 #imc-area .description,
-#percent-area .description {
+#percent-area .description,
+#risk-analysis-area .description {
   font-size: 1em;
   margin-bottom: 1em;
 }
@@ -62,7 +67,8 @@
 #square-area .formula,
 #media-area .formula,
 #imc-area .formula,
-#percent-area .formula {
+#percent-area .formula,
+#risk-analysis-area .formula {
   font-size: 1.2em;
   font-weight: bold;
   font-style: oblique;
@@ -75,7 +81,8 @@
 #square-area label,
 #media-area label,
 #imc-area label,
-#percent-area label {
+#percent-area label,
+#risk-analysis-area label {
   display: block;
   margin: 0.5em 0;
   font-weight: bold;
@@ -86,7 +93,8 @@
 #square-area input,
 #media-area input,
 #imc-area input,
-#percent-area input {
+#percent-area input,
+#risk-analysis-area input {
   width: calc(100% - 1em);
   padding: 0.5em;
   margin-bottom: 1em;
@@ -101,7 +109,8 @@
 #square-show,
 #media-show,
 #imc-show,
-#percent-show {
+#percent-show,
+#risk-analysis-show {
   background-color: #f9f9f9;
   padding: 0.5em;
   border-radius: 5px;
@@ -114,7 +123,8 @@
 #square-area button,
 #media-area button,
 #imc-area button,
-#percent-area button {
+#percent-area button,
+#risk-analysis-area button {
   color: #fff;
   padding: 0.7em 1em;
   border: none;
@@ -128,7 +138,8 @@
 #square-area button:hover,
 #media-area button:hover,
 #imc-area button:hover,
-#percent-area button:hover {
+#percent-area button:hover,
+#risk-analysis-area button:hover {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -139,7 +150,8 @@
   #square-area,
   #media-area,
   #imc-area,
-  #percent-area {
+  #percent-area,
+  #risk-analysis-area {
     width: 80%;
     padding: 1.5em;
   }
@@ -149,7 +161,8 @@
   #square-area .title,
   #media-area .title,
   #imc-area .title,
-  #percent-area .title {
+  #percent-area .title,
+  #risk-analysis-area .title {
     font-size: 1.4em;
   }
 
@@ -158,7 +171,8 @@
   #square-area .formula,
   #media-area .formula,
   #imc-area .formula,
-  #percent-area .formula {
+  #percent-area .formula,
+  #risk-analysis-area .formula {
     font-size: 1em;
   }
 }
