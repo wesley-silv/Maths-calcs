@@ -90,4 +90,7 @@ document
     document.getElementById(
       'risk-analysis-show'
     ).innerText = `Margem de risco: R$ ${riskMargin}`
+    document.getElementById(
+      'risk-analysis-total'
+    ).innerText = `Perda: R$ ${riskMargin * units}`
   })
