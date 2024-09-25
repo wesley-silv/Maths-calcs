@@ -80,14 +80,14 @@ document
   .addEventListener('click', function () {
     const amount = parseFloat(document.getElementById('amount').value)
     const margin = parseFloat(document.getElementById('margin').value)
-    const quantities = parseFloat(document.getElementById('quantities').value)
+    const units = parseFloat(document.getElementById('units').value)
 
-    if (isNaN(amount) || isNaN(margin) || isNaN(quantities)) {
+    if (isNaN(amount) || isNaN(margin) || isNaN(units)) {
       alert('Insira valores numéricos válidos!')
       return
     }
-    const riskMargin = (amount * (margin / 100)) / quantities
+    const riskMargin = (amount * (margin / 100)) / units
     document.getElementById(
       'risk-analysis-show'
-    ).innerText = `Margem: ${riskMargin}`
+    ).innerText = `Margem de risco: R$ ${riskMargin}`
   })
