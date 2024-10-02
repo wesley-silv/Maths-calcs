@@ -1,0 +1,30 @@
+#risk-analysis-area .title,
+.bi-aspect-ratio-fill,
+#risk-analysis-area .formula,
+#risk-analysis-show,
+#risk-analysis-total {
+  color: var(--red-design);
+}
+
+#risk-analysis-area input:focus {
+  outline: none;
+  border-color: #d43131;
+}
+
+#risk-analysis-area input[type='number']::-webkit-inner-spin-button,
+#risk-analysis-area input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#risk-analysis-area input:checked {
+  visibility: collapse;
+}
+
+#risk-analysis-area button {
+  background-color: #ff0000;
+}
+
+#risk-analysis-area button:hover {
+  background-color: #d43131;
+}

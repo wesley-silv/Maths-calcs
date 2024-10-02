@@ -7,6 +7,8 @@
 @import url(./styles/media.css);
 @import url(./styles/imc.css);
 @import url(./styles/percent.css);
+@import url(./styles/percent-ratio.css);
+@import url(./styles/risk-analysis.css);
 
 :root {
   --primary-color: #4caf50;
