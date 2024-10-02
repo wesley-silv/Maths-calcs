@@ -1,0 +1,19 @@
+#percent-ratio-area .title,
+.bi-percent,
+#percent-ratio-area .formula,
+#percent-ratio-show {
+  color: var(--purple-design);
+}
+
+#percent-ratio-area input:focus {
+  outline: none;
+  border-color: var(--purple-design);
+}
+
+#percent-ratio-area button {
+  background-color: var(--purple-design);
+}
+
+#percent-ratio-area button:hover {
+  background-color: #431f67;
+}

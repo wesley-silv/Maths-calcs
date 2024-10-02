@@ -76,6 +76,24 @@ document
   })
 
 document
+  .getElementById('result-percent-ratio')
+  .addEventListener('click', function () {
+    const valueRatio = parseFloat(document.getElementById('value-ratio').value)
+    const percentRatio = parseFloat(
+      document.getElementById('percent-ratio').value
+    )
+
+    if (isNaN(valueRatio) || isNaN(percentRatio)) {
+      alert('Insira valores numéricos válidos!')
+      return
+    }
+    const percent = (percentRatio / valueRatio) * 100
+    document.getElementById(
+      'percent-ratio-show'
+    ).innerText = `Relação percentual: ${percent} %`
+  })
+
+document
   .getElementById('result-risk-analysis')
   .addEventListener('click', function () {
     const amount = parseFloat(document.getElementById('amount').value)
@@ -90,7 +108,7 @@ document
     document.getElementById(
       'risk-analysis-show'
     ).innerText = `Margem de risco: R$ ${riskMargin}`
-    document.getElementById(
-      'risk-analysis-total'
-    ).innerText = `Perda: R$ ${riskMargin * units}`
+    document.getElementById('risk-analysis-total').innerText = `Perda: R$ ${
+      riskMargin * units
+    }`
   })
