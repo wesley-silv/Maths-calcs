@@ -8,28 +8,35 @@ body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   background-color: #f5f5f5;
+  padding-top: 70px; /* Espaçamento inicial para telas maiores */
 }
 
 .navbar {
-  background-color: #343a40;
+  background-color: #2c3e50;
   padding: 10px 20px;
-  position: relative;
+  position: fixed; /* Torna a navbar fixa */
+  width: 100%; /* Garante que a navbar ocupe toda a largura */
+  top: 0; /* Fixa no topo */
+  left: 0;
+  z-index: 1000; /* Mantém a navbar acima do conteúdo */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #007bff;
-  margin-bottom: 5rem;
+  border-bottom: 3px solid #3498db;
 }
 
 .navbar-toggler {
-  background-color: #007bff;
+  background-color: #3498db;
   color: white;
   border: none;
   font-size: 24px;
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
   display: block;
+  text-align: center;
 }
 
 .nav-pills {
@@ -41,16 +48,16 @@ body {
 }
 
 .nav-item {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 .nav-link {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: transparent;
-  color: white;
+  color: #ecf0f1;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-size: 18px;
   font-weight: bold;
@@ -58,13 +65,13 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: #007bff;
+  background-color: #3498db;
   color: white;
   outline: none;
 }
 
 .nav-link.active {
-  background-color: #28a745;
+  background-color: #1abc9c;
   color: white;
 }
 
@@ -95,10 +102,25 @@ body {
   }
 
   body {
-    margin: 0;
+    padding-top: 90px; /* Ajuste do espaçamento para telas maiores */
   }
 
   .navbar {
     padding: 10px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px; /* Espaçamento para telas menores */
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-toggler {
+    width: 50%;
+    margin: 0 auto;
   }
 }
