@@ -2,18 +2,18 @@
 .bi-percent,
 #percent-ratio-area .formula,
 #percent-ratio-show {
-  color: var(--purple-design);
+  color: var(--red-design);
 }
 
 #percent-ratio-area input:focus {
   outline: none;
-  border-color: var(--purple-design);
+  border-color: var(--red-design);
 }
 
 #percent-ratio-area button {
-  background-color: var(--purple-design);
+  background-color: var(--red-design);
 }
 
 #percent-ratio-area button:hover {
-  background-color: #431f67;
+  background-color: #9e481a;
 }
