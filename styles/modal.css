@@ -1,28 +1,23 @@
-.modal-content {
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.modal-header {
-  background-color: #343a40;
-  color: white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.modal-body {
+#informations,
+#informations-mobile {
+  padding: 10px 20px;
   font-size: 16px;
-  line-height: 1.5;
+  border-radius: 5px;
 }
 
-.modal-footer {
-  background-color: #f5f5f5;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+@media (min-width: 768px) {
+  #informations {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
 }
 
-.btn-close {
-  background-color: white;
-  border-radius: 50%;
+@media (max-width: 767px) {
+  #informations-mobile {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

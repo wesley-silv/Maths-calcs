@@ -3,7 +3,9 @@ document.getElementById('result-media').addEventListener('click', function () {
   const quantities = parseFloat(document.getElementById('quantities').value)
 
   if (isNaN(values) || isNaN(quantities)) {
-    alert('Insira valores numéricos válidos!')
+    alert(
+      'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+    )
     return
   }
   const mean = values / quantities
@@ -17,7 +19,9 @@ document
     const percentValue = parseFloat(document.getElementById('percent').value)
 
     if (isNaN(value) || isNaN(percentValue)) {
-      alert('Insira valores numéricos válidos!')
+      alert(
+        'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+      )
       return
     }
     const percent = (value / 100) * percentValue
@@ -35,7 +39,9 @@ document
     )
 
     if (isNaN(valueRatio) || isNaN(percentRatio)) {
-      alert('Insira valores numéricos válidos!')
+      alert(
+        'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+      )
       return
     }
     const percent = (percentRatio / valueRatio) * 100
@@ -49,7 +55,9 @@ document.getElementById('result-imc').addEventListener('click', function () {
   const height = parseFloat(document.getElementById('height').value)
 
   if (isNaN(mass) || isNaN(height)) {
-    alert('Insira valores numéricos válidos!')
+    alert(
+      'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+    )
     return
   }
   const imc = mass / Math.pow(height, 2)
@@ -64,7 +72,9 @@ document
     const units = parseFloat(document.getElementById('units').value)
 
     if (isNaN(amount) || isNaN(margin) || isNaN(units)) {
-      alert('Insira valores numéricos válidos!')
+      alert(
+        'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+      )
       return
     }
     const riskMargin = (amount * (margin / 100)) / units
@@ -83,7 +93,9 @@ document
     const height = parseFloat(document.getElementById('height-triangle').value)
 
     if (isNaN(base) || isNaN(height)) {
-      alert('Insira valores numéricos válidos!')
+      alert(
+        'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+      )
       return
     }
     const area = (base * height) / 2
@@ -95,7 +107,9 @@ document.getElementById('result-circle').addEventListener('click', function () {
   const radius = parseFloat(document.getElementById('ray-circle').value)
 
   if (isNaN(pi) || isNaN(radius)) {
-    alert('Insira valores numéricos válidos!')
+    alert(
+      'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+    )
     return
   }
   const area = pi * Math.pow(radius, 2)
@@ -106,7 +120,9 @@ document.getElementById('result-square').addEventListener('click', function () {
   const base = parseFloat(document.getElementById('base-square').value)
 
   if (isNaN(base)) {
-    alert('Insira valores numéricos válidos!')
+    alert(
+      'Insira valores numéricos válidos para obter o resultado na fórmula selecionada!'
+    )
     return
   }
   const area = Math.pow(base, 2)
