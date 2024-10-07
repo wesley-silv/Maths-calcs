@@ -1,0 +1,45 @@
+/* Botão de Download dentro da Navbar */
+.btn-icon-navbar {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-icon-navbar:hover {
+  background-color: #263aa9;
+  color: #fff;
+}
+
+.bi-download {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-pills {
+    flex-direction: column;
+  }
+
+  .btn-icon-navbar {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-pills {
+    gap: 15px;
+    align-items: center;
+  }
+
+  .btn-icon-navbar {
+    padding: 8px 10px;
+  }
+}
