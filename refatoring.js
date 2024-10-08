@@ -1,31 +1,33 @@
 // Variável para armazenar as operações realizadas
-let operacoesRealizadas = []
+let realizedOperations = []
 
 // Função para obter a data atual formatada
-function obterDataAtual() {
+function getCurrentDate() {
   const data = new Date()
   return data.toLocaleString() // Formato de data e hora local
 }
 
 // Função para registrar uma operação
-function registrarOperacao(descricao, resultado) {
-  const dataAtual = obterDataAtual()
-  const operacao = `${dataAtual}: ${descricao} = ${resultado}`
-  operacoesRealizadas.push(operacao)
+function registerOperation(description, value, quantities, result) {
+  const currentDate = getCurrentDate()
+  const operation = `${currentDate} ${description}: Valor = ${value}, Quantidade = ${quantities}, Resultado = ${result}`
+  realizedOperations.push(operation)
 }
 
 // Função para gerar o arquivo .txt e permitir download
 document.getElementById('download-txt').addEventListener('click', function () {
-  if (operacoesRealizadas.length > 0) {
-    const blob = new Blob([operacoesRealizadas.join('\n')], {
+  if (realizedOperations.length > 0) {
+    const blob = new Blob([realizedOperations.join('\n')], {
       type: 'text/plain'
     })
     const link = document.createElement('a')
     link.href = URL.createObjectURL(blob)
-    link.download = 'operacoes_realizadas.txt'
+    link.download = 'Operations-file.txt'
     link.click()
   } else {
-    alert('Nenhuma operação realizada ainda.')
+    alert(
+      'Nenhuma operação realizada! \nRealize operações para obter os registros em formato de texto.'
+    )
   }
 })
 
@@ -43,7 +45,7 @@ document.getElementById('result-media').addEventListener('click', function () {
   document.getElementById('media-show').innerText = `Média: ${mean.toFixed(2)}`
 
   // Registra a operação
-  registrarOperacao('Média Aritmética', mean.toFixed(2))
+  registerOperation('Média Aritmética', values, quantities, mean.toFixed(2))
 })
 
 // Função para calcular a porcentagem
@@ -64,7 +66,7 @@ document
     ).innerText = `Porcentagem: ${percent.toFixed(2)}`
 
     // Registra a operação
-    registrarOperacao('Porcentagem', percent.toFixed(2))
+    registerOperation('Porcentagem', value, percentValue, percent.toFixed(2))
   })
 
 // Função para calcular a relação percentual
@@ -87,7 +89,12 @@ document
     ).innerText = `Relação percentual: ${percent.toFixed(2)}%`
 
     // Registra a operação
-    registrarOperacao('Relação Percentual', `${percent.toFixed(2)}%`)
+    registerOperation(
+      'Relação Percentual',
+      valueRatio,
+      percentRatio,
+      `${percent.toFixed(2)}%`
+    )
   })
 
 // Função para calcular o IMC
@@ -104,7 +111,7 @@ document.getElementById('result-imc').addEventListener('click', function () {
   document.getElementById('imc-show').innerText = `IMC: ${imc.toFixed(2)}`
 
   // Registra a operação
-  registrarOperacao('IMC', imc.toFixed(2))
+  registerOperation('IMC', mass, height, imc.toFixed(2))
 })
 
 // Função para calcular a margem de risco
@@ -129,7 +136,12 @@ document
     ).toFixed(2)}`
 
     // Registra a operação
-    registrarOperacao('Margem de Risco', `R$ ${riskMargin.toFixed(2)}`)
+    registerOperation(
+      'Margem de Risco',
+      amount,
+      margin,
+      `R$ ${riskMargin.toFixed(2)}`
+    )
   })
 
 // Função para calcular a área do triângulo
@@ -148,7 +160,7 @@ document
     document.getElementById('show').innerText = `Área: ${area}`
 
     // Registra a operação
-    registrarOperacao('Área do Triângulo', area.toFixed(2))
+    registerOperation('Área do Triângulo', base, height, area.toFixed(2))
   })
 
 // Função para calcular a área do círculo
@@ -165,7 +177,7 @@ document.getElementById('result-circle').addEventListener('click', function () {
   document.getElementById('circle-show').innerText = `Área: ${area}`
 
   // Registra a operação
-  registrarOperacao('Área do Círculo', area.toFixed(2))
+  registerOperation('Área do Círculo', pi, radius, area.toFixed(2))
 })
 
 // Função para calcular a área do quadrado
@@ -181,5 +193,5 @@ document.getElementById('result-square').addEventListener('click', function () {
   document.getElementById('square-show').innerText = `Área: ${area}`
 
   // Registra a operação
-  registrarOperacao('Área do Quadrado', area.toFixed(2))
+  registerOperation('Área do Quadrado', base, base, area.toFixed(2))
 })
