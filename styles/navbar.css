@@ -12,17 +12,17 @@ body {
 }
 
 .navbar {
-  background-color: #2c3e50;
-  padding: 10px 20px;
-  position: fixed; 
+  background-color: #2a5077;
+  padding: 12px 20px;
+  position: fixed;
   width: 100%;
-  top: 0; 
+  top: 0;
   left: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 3px solid #3498db;
+  border-bottom: 4px solid #113147;
 }
 
 .navbar-toggler {
@@ -37,6 +37,10 @@ body {
   margin: 0 auto;
   display: block;
   text-align: center;
+}
+
+.navbar-toggler:hover {
+  background-color: #2c6f9d;
 }
 
 .nav-pills {
@@ -102,7 +106,7 @@ body {
   }
 
   body {
-    padding-top: 90px; 
+    padding-top: 90px;
   }
 
   .navbar {
@@ -112,7 +116,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 70px; 
+    padding-top: 70px;
   }
 
   .navbar {
