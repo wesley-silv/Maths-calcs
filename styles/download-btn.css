@@ -1,24 +1,21 @@
-/* Botão de Download dentro da Navbar */
 .btn-icon-navbar {
-  background-color: #3498db;
-  color: #fff;
+  color: #ecf0f1;
   border: none;
-  font-size: 24px;
+  font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn-icon-navbar:hover {
-  background-color: #263aa9;
+  background-color: #3498db;
   color: #fff;
 }
 
 .bi-download {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
