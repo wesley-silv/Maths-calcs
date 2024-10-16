@@ -11,7 +11,6 @@ function registerOperation(description, value, quantity, result) {
   realizedOperations.push(operation)
 }
 
-// Função para realizar download conforme o formato selecionado
 document
   .getElementById('download-options')
   .addEventListener('change', function () {
@@ -37,7 +36,6 @@ document
     }
   })
 
-// Função de download TXT
 function downloadTXT() {
   const blob = new Blob([realizedOperations.join('\n')], {
     type: 'text/plain'
@@ -48,19 +46,29 @@ function downloadTXT() {
   link.click()
 }
 
-// Função de download PDF
 function downloadPDF() {
   const { jsPDF } = window.jspdf
-  const doc = new jsPDF()
+  const doc = new jsPDF('landscape') // Muda para o formato paisagem (horizontal)
+
+  const margin = 12 // Margem de 1em (aproximadamente 10-12px)
+  const lineHeight = 10 // Altura entre linhas
+  const pageHeight = doc.internal.pageSize.height // Altura total da página
+  let cursorY = margin // Posição Y inicial (com margem superior)
 
   realizedOperations.forEach((operation, index) => {
-    doc.text(operation, 10, 10 + index * 10)
+    // Verifica se a próxima linha vai ultrapassar a altura da página
+    if (cursorY + lineHeight > pageHeight - margin) {
+      doc.addPage() // Adiciona uma nova página se necessário
+      cursorY = margin // Reseta o cursorY para o topo da nova página
+    }
+
+    doc.text(operation, margin, cursorY) // Adiciona o texto com margem à esquerda
+    cursorY += lineHeight // Move o cursor para a próxima linha
   })
 
   doc.save('Operations-file.pdf')
 }
 
-// Função de download XLSX
 function downloadXLSX() {
   const ws = XLSX.utils.aoa_to_sheet(
     realizedOperations.map(operation => [operation])
