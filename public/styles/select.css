@@ -3,9 +3,10 @@
   color: #ecf0f1;
   background-color: transparent;
   border: none;
-  font-size: 18px;
+  border-radius: 5px;
+  font-size: 17px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   padding: 8px 10px;
   appearance: none; /* Remove o estilo padrão do select */
   -webkit-appearance: none;
@@ -36,9 +37,9 @@
 .btn-icon-navbar {
   color: #ecf0f1;
   border: none;
-  font-size: 18px;
+  font-size: 17px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   padding: 8px 10px;
 }
 
