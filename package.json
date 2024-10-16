@@ -1,0 +1,20 @@
+{
+  "name": "maths-formule",
+  "version": "1.0.0",
+  "description": "Application to use maths formule and download of results in a .txt file",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Wesley Silva",
+    "email": "wesleysilv23@gmail.com",
+    "github": "https://github.com/wesley-silv"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
