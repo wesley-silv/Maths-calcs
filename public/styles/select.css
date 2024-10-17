@@ -1,0 +1,78 @@
+/* Estilos semelhantes aos botões */
+.select-icon-navbar {
+  color: #ecf0f1;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 8px 10px;
+  appearance: none; /* Remove o estilo padrão do select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilo do hover similar aos botões */
+.select-icon-navbar:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Reduz o tamanho do select */
+.select-icon-navbar {
+  width: 150px; /* Tamanho ajustável conforme o necessário */
+}
+
+/* Alinha o select à direita da página */
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos dos botões da navbar */
+.btn-icon-navbar {
+  color: #ecf0f1;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 8px 10px;
+}
+
+.btn-icon-navbar:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Ícones de download */
+.bi-download {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-pills {
+    flex-direction: column;
+  }
+
+  .select-icon-navbar,
+  .btn-icon-navbar {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-pills {
+    gap: 15px;
+    align-items: center;
+  }
+}
