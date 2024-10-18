@@ -193,7 +193,7 @@ document
     }
 
     const area = (base * height) / 2
-    document.getElementById('show').innerText = `Área: ${area}`
+    document.getElementById('show').innerText = `Área: ${area.toFixed(2)}`
 
     registerOperation('Área do Triângulo', base, height, area.toFixed(2))
   })
@@ -208,7 +208,7 @@ document.getElementById('result-circle').addEventListener('click', function () {
   }
 
   const area = pi * Math.pow(radius, 2)
-  document.getElementById('circle-show').innerText = `Área: ${area}`
+  document.getElementById('circle-show').innerText = `Área: ${area.toFixed(2)}`
 
   registerOperation('Área do Círculo', pi, radius, area.toFixed(2))
 })
@@ -222,7 +222,7 @@ document.getElementById('result-square').addEventListener('click', function () {
   }
 
   const area = Math.pow(base, 2)
-  document.getElementById('square-show').innerText = `Área: ${area}`
+  document.getElementById('square-show').innerText = `Área: ${area.toFixed(2)}`
 
   registerOperation('Área do Quadrado', base, base, area.toFixed(2))
 })

@@ -10,6 +10,16 @@
   border-color: var(--red-design);
 }
 
+#percent-ratio-area input[type='number']::-webkit-inner-spin-button,
+#percent-ratio-area input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#percent-ratio-area input:checked {
+  visibility: collapse;
+}
+
 #percent-ratio-area button {
   background-color: var(--red-design);
 }
