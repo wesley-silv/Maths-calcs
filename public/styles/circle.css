@@ -10,6 +10,16 @@
   border-color: #b64e17;
 }
 
+#circle-area input[type='number']::-webkit-inner-spin-button,
+#circle-area input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#circle-area input:checked {
+  visibility: collapse;
+}
+
 #circle-area button {
   background-color: #c66937;
 }

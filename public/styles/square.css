@@ -10,12 +10,22 @@
   border-color: #365a36;
 }
 
+#square-area input[type='number']::-webkit-inner-spin-button,
+#square-area input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#square-area input:checked {
+  visibility: collapse;
+}
+
 #square-area button {
   background-color: #589b58;
 }
 
 #square-show {
-  margin-top: 92px;
+  margin-top: 116px;
 }
 
 #square-area button:hover {
