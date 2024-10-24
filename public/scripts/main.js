@@ -159,7 +159,7 @@ const imcCalc = document
     registerOperation('IMC', mass, height, imc.toFixed(2))
   })
 
-const risckAnalysisCalc = document
+const riskAnalysisCalc = document
   .getElementById('result-risk-analysis')
   .addEventListener('click', function () {
     const amount = parseFloat(document.getElementById('amount').value)
