@@ -1,19 +1,64 @@
-h1 {
-  text-align: center;
-  color: #333;
-  margin: 1rem auto 2.4rem;
-}
-
-#quotes {
+.cotacoes-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
   padding: 20px;
 }
 
-.cotacao-card {
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.form-section label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form-section input {
   width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #0056b3;
+}
+
+.cotacoes-section {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cotacao-card {
+  flex: 1 1 200px;
   max-width: 300px;
   background-color: #fff;
   border-radius: 10px;
@@ -30,7 +75,6 @@ h1 {
 
 .cotacao-card h2 {
   font-size: 1.5rem;
-  font-weight: bold;
   color: #333;
   margin-bottom: 1.4rem;
 }
@@ -38,12 +82,16 @@ h1 {
 .cotacao-card p {
   font-size: 1rem;
   color: #333;
-  margin: 5px 0;
+  margin: 2rem auto;
 }
 
-/* Para telas menores */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .cotacoes-container {
+    flex-direction: column;
+  }
+
   .cotacao-card {
     max-width: 90%;
+    margin: 0 auto;
   }
 }

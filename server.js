@@ -10,13 +10,22 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/cotacoes', async (req, res) => {
+  const { ticker, token } = req.query
+
+  if (!ticker || !token) {
+    return res.status(400).json({ message: 'Ticker e token são obrigatórios' })
+  }
+
   try {
-    const fetch = await import('node-fetch') // Importação dinâmica
-    const response = await fetch.default('https://brapi.dev/api/quote/mxrf11', {
-      headers: {
-        Authorization: 'avbwNQ679JViRzR3inZxLY' // Insira o token aqui
+    const fetch = await import('node-fetch')
+    const response = await fetch.default(
+      `https://brapi.dev/api/quote/${ticker}`,
+      {
+        headers: {
+          Authorization: token
+        }
       }
-    })
+    )
     const data = await response.json()
 
     if (data.results && Array.isArray(data.results)) {
