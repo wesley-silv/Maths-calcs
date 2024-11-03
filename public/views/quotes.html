@@ -13,7 +13,6 @@
     <title>Cotações</title>
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/select.css" />
     <link rel="stylesheet" href="/styles/quotes.css" />
   </head>
   <body>
@@ -33,22 +32,37 @@
           <a class="nav-link" href="/views/quotes.html">Cotações</a>
         </li>
       </ul>
-      <div class="navbar-right">
-        <select
-          id="download-options"
-          class="select-icon-navbar"
-          title="Baixar relatório com operações realizadas"
-        >
-          <option value="" disabled selected>Baixar</option>
-          <option value="txt">txt</option>
-          <option value="pdf">pdf</option>
-          <option value="xlsx">xlsx</option>
-        </select>
-      </div>
     </nav>
-    <main>
-      <h1>Cotações Atualizadas</h1>
-      <div id="quotes"></div>
+
+    <main class="cotacoes-container">
+      <section class="form-section">
+        <form id="cotacao-form">
+          <h2>Consultar Cotações</h2>
+          <label for="ticker">Ticker:</label>
+          <input
+            type="text"
+            id="ticker"
+            name="ticker"
+            placeholder="Ex: MXRF11"
+            required
+          />
+
+          <label for="token">Token:</label>
+          <input
+            type="text"
+            id="token"
+            name="token"
+            placeholder="Insira seu token"
+            required
+          />
+
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+
+      <section class="cotacoes-section">
+        <div id="quotes"></div>
+      </section>
     </main>
     <script src="/scripts/navbar.js"></script>
     <script src="/scripts/quotes.js"></script>
