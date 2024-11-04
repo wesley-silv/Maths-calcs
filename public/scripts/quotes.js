@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Verifica se há dados válidos
       if (!Array.isArray(data) || data.length === 0) {
-        quotesDiv.innerHTML = '<p>Não foram encontradas cotações.</p>'
+        quotesDiv.innerHTML =
+          '<p>Não foram encontradas cotações relacionadas a sua busca.</p>'
         return
       }
 
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       quotesDiv.innerHTML = '<p>Erro ao carregar as cotações.</p>'
       console.error('Erro ao buscar cotações:', error)
+      console.log('Buscando entender o erro', error)
     }
   }
 })
