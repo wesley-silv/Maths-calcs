@@ -20,7 +20,9 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "connect-livereload": "^0.6.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "livereload": "^0.9.3"
   },
   "config": {
     "commitizen": {
