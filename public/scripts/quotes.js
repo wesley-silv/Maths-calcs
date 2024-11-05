@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   async function fetchQuotes(ticker, token) {
     try {
       const response = await fetch(
-        `/api/cotacoes?ticker=${ticker}&token=${token}`
+        `/api/quotes?ticker=${ticker}&token=${token}`
       )
       const data = await response.json()
 
