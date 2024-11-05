@@ -75,9 +75,20 @@
 }
 
 .cotacao-card p {
-  font-size: 1rem;
-  color: #333;
-  margin: 2rem auto;
+  font-size: 1rem; /* Tamanho de texto confortável para leitura */
+  color: #555; /* Cor cinza suave para reduzir o cansaço visual */
+  line-height: 1.6; /* Altura de linha para uma melhor legibilidade */
+  margin-bottom: 1rem; /* Espaçamento consistente entre os parágrafos */
+  word-wrap: break-word; /* Garante que textos longos sejam quebrados e se ajustem ao contêiner */
+}
+
+.cotacao-card p strong {
+  color: #007bff; /* Destaque sutil em azul para informações importantes */
+}
+
+.cotacao-card p span {
+  font-weight: 500; /* Destaca partes do texto sem a ênfase total de negrito */
+  color: #333; /* Tonalidade escura para melhor contraste */
 }
 
 @media (max-width: 768px) {

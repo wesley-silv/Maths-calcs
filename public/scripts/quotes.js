@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', async event => {
     event.preventDefault()
     const ticker = document.getElementById('ticker').value
-    const token = document.getElementById('token').value
+    const token = 'avbwNQ679JViRzR3inZxLY' // Token inserido diretamente no código
     fetchQuotes(ticker, token)
   })
 
-  async function fetchQuotes(ticker = 'MXRF11', token = 'seuTokenAqui') {
+  async function fetchQuotes(ticker, token) {
     try {
       const response = await fetch(
         `/api/cotacoes?ticker=${ticker}&token=${token}`
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // Limpa os cards existentes antes de adicionar novos
       quotesDiv.innerHTML = ''
 
-      // Verifica se há dados válidos
       if (!Array.isArray(data) || data.length === 0) {
         quotesDiv.innerHTML =
           '<p>Não foram encontradas cotações relacionadas a sua busca.</p>'
@@ -34,13 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
           <h2>${cotacao.nome}</h2>
           <p>Preço Atual: R$ ${cotacao.preco}</p>
           <p>Variação: ${cotacao.variacao}%</p>
+          <p>Abertura: R$ ${cotacao.abertura}</p>
+          <p>Fechamento Anterior: R$ ${cotacao.fechamento}</p>
+          <p>Volume: ${cotacao.volume}</p>
         `
         quotesDiv.appendChild(card)
       })
     } catch (error) {
       quotesDiv.innerHTML = '<p>Erro ao carregar as cotações.</p>'
       console.error('Erro ao buscar cotações:', error)
-      console.log('Buscando entender o erro', error)
     }
   }
 })
