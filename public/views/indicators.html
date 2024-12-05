@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/navbar.css" />
     <link rel="stylesheet" href="/styles/select.css" />
     <link rel="stylesheet" href="/styles/card.css" />
+    <link rel="stylesheet" href="/styles/analysis.css" />
 
     <title>Indicadores</title>
   </head>
@@ -52,27 +53,34 @@
     </nav>
     <h1>Indicadores fundamentalistas</h1>
     <main>
-      <div class="math-content" id="financial">
-        <section id="media-area">
-          <h4 class="title">Média Aritmética</h4>
-          <p class="description">Calcule a média aritimética</p>
-          <p class="formula">MA = (x1 + xn) / n</p>
-          <label for="values">Valor</label>
+      <div class="math-content" id="indicators">
+        <section id="analysis">
+          <h4 class="title">Análise</h4>
+          <p class="description">Cria uma análise para o seu ativo.</p>
+          <p class="formula">P.M. = Custo / Quantidade</p>
+          <label for="ticker">Valor unitário</label>
+          <input
+            type="text"
+            name="ticker"
+            id="ticker"
+            placeholder="Digite o ticker"
+          />
+          <label for="values">Valor unitário</label>
           <input
             type="number"
-            name="values"
-            id="values"
+            name="unit-value"
+            id="unit-value"
             placeholder="Digite o valor"
           />
           <label for="quantities">Quantidade</label>
           <input
             type="number"
-            name="quantities"
-            id="quantities"
+            name="quanty"
+            id="quanty"
             placeholder="Digite a quantidade"
           />
-          <p id="media-show"></p>
-          <button id="result-media">Resultado</button>
+          <p id="analysis-show"></p>
+          <button id="result-analysis">Resultado</button>
         </section>
       </div>
     </main>
