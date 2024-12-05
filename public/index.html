@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/circle.css" />
     <link rel="stylesheet" href="/styles/triangle.css" />
     <link rel="stylesheet" href="/styles/square.css" />
+    <link rel="stylesheet" href="/styles/analysis.css" />
 
     <title>Cálculos Matemáticos</title>
   </head>
@@ -122,14 +123,15 @@
         </div>
       </div>
     </div>
-    <h1>Cálculos matemáticos</h1>
+    <h1>Cálculos Matemáticos</h1>
     <main>
       <div class="math-content" id="financial">
         <section id="media-area">
-          <h4 class="title">Média Aritmética</h4>
-          <p class="description">Calcule a média aritimética</p>
-          <p class="formula">MA = (x1 + xn) / n</p>
-          <label for="values">Valor</label>
+          <h4 class="title">Preço Médio</h4>
+          <p class="description">
+            Calcule o preço médio das ações ou cotas de fundos imobiliários
+          </p>
+          <label for="values">Montante</label>
           <input
             type="number"
             name="values"
@@ -146,31 +148,11 @@
           <p id="media-show"></p>
           <button id="result-media">Resultado</button>
         </section>
-        <section id="percent-area">
-          <h4 class="title">Porcentagem</h4>
-          <p class="description">Calcule o percentual</p>
-          <p class="formula">P = (q / 100) x V</p>
-          <label for="value">Valor</label>
-          <input
-            type="number"
-            name="value"
-            id="value"
-            placeholder="Digite o valor"
-          />
-          <label for="height">Percentual</label>
-          <input
-            type="number"
-            name="percent"
-            id="percent"
-            placeholder="Digite o percentual (%)"
-          />
-          <p id="percent-show"></p>
-          <button id="result-percent">Resultado</button>
-        </section>
         <section id="percent-ratio-area">
           <h4 class="title">Relação Percentual</h4>
-          <p class="description">Calcule a relação percentual</p>
-          <p class="formula">RP = (r / m) x 100</p>
+          <p class="description">
+            Calcule a relação percentual sobre a aplicação em ativos
+          </p>
           <label for="value-ratio">Valor</label>
           <input
             type="number"
@@ -187,6 +169,28 @@
           />
           <p id="percent-ratio-show"></p>
           <button id="result-percent-ratio">Resultado</button>
+        </section>
+        <section id="percent-area">
+          <h4 class="title">Porcentagem</h4>
+          <p class="description">
+            Calcule o percentual sobre os valores aplicados
+          </p>
+          <label for="value">Valor</label>
+          <input
+            type="number"
+            name="value"
+            id="value"
+            placeholder="Digite o valor"
+          />
+          <label for="height">Percentual</label>
+          <input
+            type="number"
+            name="percent"
+            id="percent"
+            placeholder="Digite o percentual (%)"
+          />
+          <p id="percent-show"></p>
+          <button id="result-percent">Resultado</button>
         </section>
       </div>
       <div class="math-content" id="arithimetic">

@@ -90,7 +90,7 @@ const mediaCalc = document
     }
 
     const mean = values / quantities
-    document.getElementById('media-show').innerText = `Média: ${mean.toFixed(
+    document.getElementById('media-show').innerText = `Preço médio: R$ ${mean.toFixed(
       2
     )}`
 
@@ -239,4 +239,34 @@ const squareCalc = document
     )}`
 
     registerOperation('Área do Quadrado', base, base, area.toFixed(2))
+  })
+
+// Analysis
+
+const analysis = document
+  .getElementById('analysis')
+  .addEventListener('click', function () {
+    const ticker = parseFloat(document.getElementById('ticker').value)
+    const unitValue = parseFloat(document.getElementById('unit-value').value)
+    const quanty = parseFloat(document.getElementById('quanty').value)
+
+    if (isNaN(ticker) || isNaN(unitValue) || isNaN(quanty)) {
+      alert('Insira valores numéricos válidos!')
+      return
+    }
+
+    const analysis = (amount * (margin / 100)) / units
+    document.getElementById(
+      'analysis-show'
+    ).innerText = `Margem de risco: R$ ${analysis.toFixed(2)}`
+    document.getElementById('risk-analysis-total').innerText = `Perda: R$ ${(
+      analysis * units
+    ).toFixed(2)}`
+
+    registerOperation(
+      'Margem de Risco',
+      amount,
+      margin,
+      `R$ ${analysis.toFixed(2)}`
+    )
   })
