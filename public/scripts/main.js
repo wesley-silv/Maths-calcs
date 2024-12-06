@@ -78,23 +78,42 @@ function downloadXLSX() {
   XLSX.writeFile(wb, 'Operations-file.xlsx')
 }
 
-const mediaCalc = document
-  .getElementById('result-media')
-  .addEventListener('click', function () {
-    const values = parseFloat(document.getElementById('values').value)
-    const quantities = parseFloat(document.getElementById('quantities').value)
+// Variáveis para armazenar o acumulado de valores e quantidades
+let totalValue = 0
+let totalQuantity = 0
 
-    if (isNaN(values) || isNaN(quantities)) {
-      alert('Insira valores numéricos válidos!')
+const consValue = document
+  .getElementById('result-cost-value')
+  .addEventListener('click', function () {
+    const value = parseFloat(document.getElementById('values').value)
+    const quantity = parseFloat(document.getElementById('quantities').value)
+
+    if (isNaN(value) || isNaN(quantity) || quantity <= 0) {
+      alert('Insira valores numéricos válidos e quantidade maior que zero!')
       return
     }
 
-    const mean = values / quantities
-    document.getElementById('media-show').innerText = `Preço médio: R$ ${mean.toFixed(
-      2
-    )}`
+    // Atualiza os totais acumulados
+    totalValue += value * quantity
+    totalQuantity += quantity
 
-    registerOperation('Média Aritmética', values, quantities, mean.toFixed(2))
+    // Calcula o preço médio acumulado
+    const mean = totalValue / totalQuantity
+
+    // Atualiza a exibição do preço médio
+    document.getElementById(
+      'media-show'
+    ).innerText = `Preço médio: R$ ${mean.toFixed(2)}`
+
+    document.getElementById(
+      'cost-value-all'
+    ).innerText = `Quantidade total: ${totalQuantity.toFixed(0)}`
+
+    registerOperation('Preço médio de custo', value, quantity, mean.toFixed(2))
+
+    // Clear all input fields
+    document.getElementById('values').value = ''
+    document.getElementById('quantities').value = ''
   })
 
 const percentCalc = document
