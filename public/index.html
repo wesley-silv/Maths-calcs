@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/styles/select.css" />
     <link rel="stylesheet" href="/styles/modal.css" />
     <link rel="stylesheet" href="/styles/card.css" />
-    <link rel="stylesheet" href="/styles/media.css" />
+    <link rel="stylesheet" href="/styles/cost-value.css" />
     <link rel="stylesheet" href="/styles/percent.css" />
     <link rel="stylesheet" href="/styles/percent-ratio.css" />
     <link rel="stylesheet" href="/styles/imc.css" />
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="/styles/square.css" />
     <link rel="stylesheet" href="/styles/analysis.css" />
 
-    <title>Cálculos Matemáticos</title>
+    <title>Cálculos Financeiros</title>
   </head>
   <body>
     <nav class="navbar">
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-    <h1>Cálculos Matemáticos</h1>
+    <h1>Cálculos Financeiros</h1>
     <main>
       <div class="math-content" id="financial">
         <section id="media-area">
@@ -131,7 +131,7 @@
           <p class="description">
             Calcule o preço médio das ações ou cotas de fundos imobiliários
           </p>
-          <label for="values">Montante</label>
+          <label for="values">Preço unitário</label>
           <input
             type="number"
             name="values"
@@ -146,7 +146,8 @@
             placeholder="Digite a quantidade"
           />
           <p id="media-show"></p>
-          <button id="result-media">Resultado</button>
+          <p id="cost-value-all"></p>
+          <button id="result-cost-value">Resultado</button>
         </section>
         <section id="percent-ratio-area">
           <h4 class="title">Relação Percentual</h4>
@@ -193,34 +194,13 @@
           <button id="result-percent">Resultado</button>
         </section>
       </div>
-      <div class="math-content" id="arithimetic">
-        <section id="imc-area">
-          <h4 class="title">Ind. Massa Corporal</h4>
-          <p class="description">Calcule o índice de massa corporal</p>
-          <p class="formula">IMC = (m / a²)</p>
-          <label for="mass">Massa</label>
-          <input
-            type="number"
-            name="mass"
-            id="mass"
-            placeholder="Digite a massa (kg)"
-          />
-          <label for="height">Altura</label>
-          <input
-            type="number"
-            name="height"
-            id="height"
-            placeholder="Digite a altura (m)"
-          />
-          <p id="imc-show"></p>
-          <button id="result-imc">Resultado</button>
-        </section>
-      </div>
+
       <div class="math-content" id="indicators">
         <section id="risk-analysis-area">
           <h4 class="title">Análise de Risco</h4>
-          <p class="description">Calcule a margem de risco</p>
-          <p class="formula">AR = (m * %) / q</p>
+          <p class="description">
+            Calcule o percentual da margem de risco sobre os ativos
+          </p>
           <label for="amount">Montante</label>
           <input
             type="number"
@@ -292,7 +272,6 @@
           <p id="circle-show"></p>
           <button id="result-circle">Resultado</button>
         </section>
-
         <section id="square-area">
           <h4 class="title">Quadrado</h4>
           <p class="description">Calcule a área do quadrado</p>
@@ -306,6 +285,29 @@
           />
           <p id="square-show"></p>
           <button id="result-square">Resultado</button>
+        </section>
+      </div>
+      <div class="math-content" id="arithimetic">
+        <section id="imc-area">
+          <h4 class="title">Ind. Massa Corporal</h4>
+          <p class="description">Calcule o índice de massa corporal</p>
+          <p class="formula">IMC = (m / a²)</p>
+          <label for="mass">Massa</label>
+          <input
+            type="number"
+            name="mass"
+            id="mass"
+            placeholder="Digite a massa (kg)"
+          />
+          <label for="height">Altura</label>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            placeholder="Digite a altura (m)"
+          />
+          <p id="imc-show"></p>
+          <button id="result-imc">Resultado</button>
         </section>
       </div>
     </main>
