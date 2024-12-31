@@ -5,9 +5,15 @@ function getCurrentDate() {
   return data.toLocaleString()
 }
 
-function registerOperation(description, value, quantity, result) {
+function registerOperation(
+  description,
+  value,
+  quantity,
+  result,
+  ticker = 'N/A'
+) {
   const currentDate = getCurrentDate()
-  const operation = `${currentDate} ${description}: Valor = ${value}, Quantidade = ${quantity}, Resultado = ${result}`
+  const operation = `${currentDate} ${description}: Ativo = ${ticker}, Valor = ${value}, Quantidade = ${quantity}, Resultado = ${result}`
   realizedOperations.push(operation)
 }
 
@@ -85,35 +91,37 @@ let totalQuantity = 0
 const consValue = document
   .getElementById('result-cost-value')
   .addEventListener('click', function () {
+    const ticker = document.getElementById('ticker').value.trim()
     const value = parseFloat(document.getElementById('values').value)
     const quantity = parseFloat(document.getElementById('quantities').value)
 
-    if (isNaN(value) || isNaN(quantity) || quantity <= 0) {
-      alert('Insira valores numéricos válidos e quantidade maior que zero!')
+    if (!ticker || isNaN(value) || isNaN(quantity) || quantity <= 0) {
+      alert('Insira um código de ativo e valores válidos!')
       return
     }
 
-    // Atualiza os totais acumulados
     totalValue += value * quantity
     totalQuantity += quantity
-
-    // Calcula o preço médio acumulado
     const mean = totalValue / totalQuantity
 
-    // Atualiza a exibição do preço médio
     document.getElementById(
       'media-show'
     ).innerText = `Preço médio: R$ ${mean.toFixed(2)}`
-
     document.getElementById(
       'cost-value-all'
     ).innerText = `Quantidade total: ${totalQuantity.toFixed(0)}`
 
-    registerOperation('Preço médio de custo', value, quantity, mean.toFixed(2))
+    registerOperation(
+      'Preço médio de custo',
+      value,
+      quantity,
+      mean.toFixed(2),
+      ticker
+    )
 
-    // Clear all input fields
     document.getElementById('values').value = ''
     document.getElementById('quantities').value = ''
+    document.getElementById('ticker').value = ''
   })
 
 const percentCalc = document
