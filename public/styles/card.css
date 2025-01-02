@@ -1,7 +1,7 @@
 #triangle-area,
 #circle-area,
 #square-area,
-#media-area,
+#cost-value,
 #imc-area,
 #percent-area,
 #percent-ratio-area,
@@ -20,7 +20,7 @@
 #triangle-area:hover,
 #circle-area:hover,
 #square-area:hover,
-#media-area:hover,
+#cost-value:hover,
 #imc-area:hover,
 #percent-area:hover,
 #percent-ratio-area:hover,
@@ -32,7 +32,7 @@
 #triangle-area .title,
 #circle-area .title,
 #square-area .title,
-#media-area .title,
+#cost-value .title,
 #imc-area .title,
 #percent-area .title,
 #percent-ratio-area .title,
@@ -46,7 +46,7 @@
 #triangle-area .description,
 #circle-area .description,
 #square-area .description,
-#media-area .description,
+#cost-value .description,
 #imc-area .description,
 #percent-area .description,
 #percent-ratio-area .description,
@@ -55,25 +55,10 @@
   margin-bottom: 1em;
 }
 
-#triangle-area .formula,
-#circle-area .formula,
-#square-area .formula,
-#media-area .formula,
-#imc-area .formula,
-#percent-area .formula,
-#percent-ratio-area .formula,
-#risk-analysis-area .formula {
-  font-size: 1.2em;
-  font-weight: bold;
-  font-style: oblique;
-  margin-bottom: 1em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 #triangle-area label,
 #circle-area label,
 #square-area label,
-#media-area label,
+#cost-value label,
 #imc-area label,
 #percent-area label,
 #percent-ratio-area label,
@@ -86,7 +71,7 @@
 #triangle-area input,
 #circle-area input,
 #square-area input,
-#media-area input,
+#cost-value input,
 #imc-area input,
 #percent-area input,
 #percent-ratio-area input,
@@ -100,26 +85,10 @@
   transition: border 0.3s ease;
 }
 
-#show,
-#circle-show,
-#square-show,
-#media-show,
-#imc-show,
-#percent-show,
-#percent-ratio-show,
-#risk-analysis-show,
-#risk-analysis-total {
-  background-color: #f9f9f9;
-  padding: 0.5em;
-  border-radius: 5px;
-  margin-top: 1em;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
 #triangle-area button,
 #circle-area button,
 #square-area button,
-#media-area button,
+#cost-value button,
 #imc-area button,
 #percent-area button,
 #percent-ratio-area button,
@@ -135,7 +104,7 @@
 #triangle-area button:hover,
 #circle-area button:hover,
 #square-area button:hover,
-#media-area button:hover,
+#cost-value button:hover,
 #imc-area button:hover,
 #percent-area button:hover,
 #percent-ratio-area button:hover,
@@ -148,7 +117,7 @@
   #triangle-area,
   #circle-area,
   #square-area,
-  #media-area,
+  #cost-value,
   #imc-area,
   #percent-area,
   #percent-ratio-area,
@@ -160,7 +129,7 @@
   #triangle-area .title,
   #circle-area .title,
   #square-area .title,
-  #media-area .title,
+  #cost-value .title,
   #imc-area .title,
   #percent-area .title,
   #percent-ratio-area .title,
@@ -171,7 +140,7 @@
   #triangle-area .formula,
   #circle-area .formula,
   #square-area .formula,
-  #media-area .formula,
+  #cost-value .formula,
   #imc-area .formula,
   #percent-area .formula,
   #percent-ratio-area .formula,

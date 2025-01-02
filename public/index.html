@@ -126,28 +126,28 @@
     <h1>Cálculos Financeiros</h1>
     <main>
       <div class="math-content" id="financial">
-        <section id="media-area">
+        <section id="cost-value">
           <h4 class="title">Preço Médio</h4>
           <p class="description">
             Calcule o preço médio das ações ou cotas de fundos imobiliários
           </p>
-          <label for="ticker">Código do Ativo:</label>
+          <label for="ticker">Código do ativo</label>
           <input type="text" id="ticker" placeholder="Exemplo: MXRF11" />
           <label for="values">Preço unitário</label>
           <input
             type="number"
             name="values"
             id="values"
-            placeholder="Digite o valor"
+            placeholder="Exemplo: R$ 12,85"
           />
           <label for="quantities">Quantidade</label>
           <input
             type="number"
             name="quantities"
             id="quantities"
-            placeholder="Digite a quantidade"
+            placeholder="Exemplo: 50"
           />
-          <p id="media-show"></p>
+          <p id="cost-value-show"></p>
           <p id="cost-value-all"></p>
           <button id="result-cost-value">Resultado</button>
         </section>

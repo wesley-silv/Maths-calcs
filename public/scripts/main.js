@@ -5,15 +5,9 @@ function getCurrentDate() {
   return data.toLocaleString()
 }
 
-function registerOperation(
-  description,
-  value,
-  quantity,
-  result,
-  ticker = 'N/A'
-) {
+function registerOperation(description, value, quantity, result, ticker) {
   const currentDate = getCurrentDate()
-  const operation = `${currentDate} ${description}: Ativo = ${ticker}, Valor = ${value}, Quantidade = ${quantity}, Resultado = ${result}`
+  const operation = `${currentDate} ${description}: Ativo = ${ticker.toUpperCase()}, Valor = ${value}, Quantidade = ${quantity}, Resultado = ${result}`
   realizedOperations.push(operation)
 }
 
@@ -88,7 +82,7 @@ function downloadXLSX() {
 let totalValue = 0
 let totalQuantity = 0
 
-const consValue = document
+const costValue = document
   .getElementById('result-cost-value')
   .addEventListener('click', function () {
     const ticker = document.getElementById('ticker').value.trim()
@@ -105,7 +99,7 @@ const consValue = document
     const mean = totalValue / totalQuantity
 
     document.getElementById(
-      'media-show'
+      'cost-value-show'
     ).innerText = `Preço médio: R$ ${mean.toFixed(2)}`
     document.getElementById(
       'cost-value-all'
@@ -121,7 +115,6 @@ const consValue = document
 
     document.getElementById('values').value = ''
     document.getElementById('quantities').value = ''
-    document.getElementById('ticker').value = ''
   })
 
 const percentCalc = document
