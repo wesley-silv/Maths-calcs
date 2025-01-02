@@ -1,29 +1,30 @@
-#media-area .title,
+#cost-value .title,
 .bi-aspect-ratio-fill,
-#media-show,
+#cost-value-show,
 #cost-value-all {
   color: var(--navy-design);
 }
 
-#media-area input:focus {
+#cost-value input:focus {
   outline: none;
   border-color: #000080;
 }
 
-#media-area input[type='number']::-webkit-inner-spin-button,
-#media-area input[type='number']::-webkit-outer-spin-button {
+#cost-value input[type='number']::-webkit-inner-spin-button,
+#cost-value input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-#media-area input:checked {
+#cost-value input:checked {
   visibility: collapse;
 }
 
-#media-area button {
+#cost-value button {
+  margin: 2rem auto;
   background-color: #3333c8;
 }
 
-#media-area button:hover {
+#cost-value button:hover {
   background-color: #000080;
 }
