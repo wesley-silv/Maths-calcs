@@ -17,7 +17,7 @@
 
 /* Estilo do hover similar aos botões */
 .select-icon-navbar:hover {
-  background-color: #3498db;
+  background-color: var(--purple-design);
   color: #fff;
 }
 

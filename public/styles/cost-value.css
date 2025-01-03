@@ -1,30 +1,45 @@
 #cost-value .title,
-.bi-aspect-ratio-fill,
 #cost-value-show,
-#cost-value-all {
-  color: var(--navy-design);
+#cost-value-all,
+#percent-ratio-area .title,
+#percent-ratio-show,
+#percent-area .title,
+#percent-show {
+  color: var(--blue-design);
 }
 
-#cost-value input:focus {
+#cost-value input:focus,
+#percent-ratio-area input:focus,
+#percent-area input:focus {
   outline: none;
   border-color: #000080;
 }
 
 #cost-value input[type='number']::-webkit-inner-spin-button,
-#cost-value input[type='number']::-webkit-outer-spin-button {
+#cost-value input[type='number']::-webkit-outer-spin-button,
+#percent-ratio-area input[type='number']::-webkit-inner-spin-button,
+#percent-ratio-area input[type='number']::-webkit-outer-spin-button,
+#percent-area input[type='number']::-webkit-inner-spin-button,
+#percent-area input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-#cost-value input:checked {
+#cost-value input:checked,
+#percent-ratio-area input:checked,
+#percent-area input:checked {
   visibility: collapse;
 }
 
-#cost-value button {
+#cost-value button,
+#percent-ratio-area button,
+#percent-area button {
   margin: 2rem auto;
   background-color: #3333c8;
 }
 
-#cost-value button:hover {
+#cost-value button:hover,
+#percent-ratio-area button:hover,
+#percent-area button:hover {
   background-color: #000080;
 }

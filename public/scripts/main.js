@@ -78,7 +78,6 @@ function downloadXLSX() {
   XLSX.writeFile(wb, 'Operations-file.xlsx')
 }
 
-// Variáveis para armazenar o acumulado de valores e quantidades
 let totalValue = 0
 let totalQuantity = 0
 
@@ -103,7 +102,7 @@ const costValue = document
     ).innerText = `Preço médio: R$ ${mean.toFixed(2)}`
     document.getElementById(
       'cost-value-all'
-    ).innerText = `Quantidade total: ${totalQuantity.toFixed(0)}`
+    ).innerText = `Quantidade: ${totalQuantity.toFixed(0)}`
 
     registerOperation(
       'Preço médio de custo',
@@ -162,23 +161,6 @@ const percentRatioCalc = document
     )
   })
 
-const imcCalc = document
-  .getElementById('result-imc')
-  .addEventListener('click', function () {
-    const mass = parseFloat(document.getElementById('mass').value)
-    const height = parseFloat(document.getElementById('height').value)
-
-    if (isNaN(mass) || isNaN(height)) {
-      alert('Insira valores numéricos válidos!')
-      return
-    }
-
-    const imc = mass / Math.pow(height, 2)
-    document.getElementById('imc-show').innerText = `IMC: ${imc.toFixed(2)}`
-
-    registerOperation('IMC', mass, height, imc.toFixed(2))
-  })
-
 const riskAnalysisCalc = document
   .getElementById('result-risk-analysis')
   .addEventListener('click', function () {
@@ -204,89 +186,5 @@ const riskAnalysisCalc = document
       amount,
       margin,
       `R$ ${riskMargin.toFixed(2)}`
-    )
-  })
-
-const triangleCalc = document
-  .getElementById('result-triangle')
-  .addEventListener('click', function () {
-    const base = parseFloat(document.getElementById('base-triangle').value)
-    const height = parseFloat(document.getElementById('height-triangle').value)
-
-    if (isNaN(base) || isNaN(height)) {
-      alert('Insira valores numéricos válidos!')
-      return
-    }
-
-    const area = (base * height) / 2
-    document.getElementById('show').innerText = `Área: ${area.toFixed(2)}`
-
-    registerOperation('Área do Triângulo', base, height, area.toFixed(2))
-  })
-
-const circleCalc = document
-  .getElementById('result-circle')
-  .addEventListener('click', function () {
-    const pi = parseFloat(document.getElementById('pi-circle').value)
-    const radius = parseFloat(document.getElementById('ray-circle').value)
-
-    if (isNaN(pi) || isNaN(radius)) {
-      alert('Insira valores numéricos válidos!')
-      return
-    }
-
-    const area = pi * Math.pow(radius, 2)
-    document.getElementById('circle-show').innerText = `Área: ${area.toFixed(
-      2
-    )}`
-
-    registerOperation('Área do Círculo', pi, radius, area.toFixed(2))
-  })
-
-const squareCalc = document
-  .getElementById('result-square')
-  .addEventListener('click', function () {
-    const base = parseFloat(document.getElementById('base-square').value)
-
-    if (isNaN(base)) {
-      alert('Insira valores numéricos válidos!')
-      return
-    }
-
-    const area = Math.pow(base, 2)
-    document.getElementById('square-show').innerText = `Área: ${area.toFixed(
-      2
-    )}`
-
-    registerOperation('Área do Quadrado', base, base, area.toFixed(2))
-  })
-
-// Analysis
-
-const analysis = document
-  .getElementById('analysis')
-  .addEventListener('click', function () {
-    const ticker = parseFloat(document.getElementById('ticker').value)
-    const unitValue = parseFloat(document.getElementById('unit-value').value)
-    const quanty = parseFloat(document.getElementById('quanty').value)
-
-    if (isNaN(ticker) || isNaN(unitValue) || isNaN(quanty)) {
-      alert('Insira valores numéricos válidos!')
-      return
-    }
-
-    const analysis = (amount * (margin / 100)) / units
-    document.getElementById(
-      'analysis-show'
-    ).innerText = `Margem de risco: R$ ${analysis.toFixed(2)}`
-    document.getElementById('risk-analysis-total').innerText = `Perda: R$ ${(
-      analysis * units
-    ).toFixed(2)}`
-
-    registerOperation(
-      'Margem de Risco',
-      amount,
-      margin,
-      `R$ ${analysis.toFixed(2)}`
     )
   })

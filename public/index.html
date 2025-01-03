@@ -16,13 +16,8 @@
     <link rel="stylesheet" href="/styles/modal.css" />
     <link rel="stylesheet" href="/styles/card.css" />
     <link rel="stylesheet" href="/styles/cost-value.css" />
-    <link rel="stylesheet" href="/styles/percent.css" />
     <link rel="stylesheet" href="/styles/percent-ratio.css" />
-    <link rel="stylesheet" href="/styles/imc.css" />
     <link rel="stylesheet" href="/styles/risk-analysis.css" />
-    <link rel="stylesheet" href="/styles/circle.css" />
-    <link rel="stylesheet" href="/styles/triangle.css" />
-    <link rel="stylesheet" href="/styles/square.css" />
     <link rel="stylesheet" href="/styles/analysis.css" />
 
     <title>Cálculos Financeiros</title>
@@ -38,22 +33,12 @@
       </button>
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/index.html">Início</a>
+          <a class="nav-link" aria-current="page" href="/index.html"
+            >Cálculos</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/views/quotes.html">Cotações</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/views/indicators.html">Indicadores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#financial">Financeiro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#indicators">Indicadores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#geometric">Geométrico</a>
         </li>
       </ul>
       <div class="navbar-right">
@@ -63,9 +48,9 @@
           title="Baixar relatório com operações realizadas"
         >
           <option value="" disabled selected>Baixar</option>
-          <option value="txt">txt</option>
-          <option value="pdf">pdf</option>
-          <option value="xlsx">xlsx</option>
+          <option value="txt">Texto</option>
+          <option value="pdf">PDF</option>
+          <option value="xlsx">Excel</option>
         </select>
       </div>
     </nav>
@@ -227,89 +212,6 @@
           <p id="risk-analysis-show"></p>
           <p id="risk-analysis-total"></p>
           <button id="result-risk-analysis">Resultado</button>
-        </section>
-      </div>
-      <div class="math-content" id="geometric">
-        <section id="triangle-area">
-          <h4 class="title">Triângulo</h4>
-          <p class="description">Calcule a área do triângulo</p>
-          <p class="formula">T = (b x a) / 2</p>
-          <label for="base-triangle">Base</label>
-          <input
-            type="number"
-            name="base-triangle"
-            id="base-triangle"
-            placeholder="Digite o valor da base"
-          />
-          <label for="height-triangle">Altura</label>
-          <input
-            type="number"
-            name="height-triangle"
-            id="height-triangle"
-            placeholder="Digite o valor da altura"
-          />
-          <p id="show"></p>
-          <button id="result-triangle">Resultado</button>
-        </section>
-
-        <section id="circle-area">
-          <h4 class="title">Círculo</h4>
-          <p class="description">Calcule a área do círculo</p>
-          <p class="formula">C = (&#960; x r²)</p>
-          <label for="pi-circle">Pi</label>
-          <input
-            type="number"
-            name="pi-circle"
-            id="pi-circle"
-            placeholder="O valor de &#960; é 3.14"
-            value="3.14"
-          />
-          <label for="ray-circle">Raio</label>
-          <input
-            type="number"
-            name="ray-circle"
-            id="ray-circle"
-            placeholder="Digite o valor do raio"
-          />
-          <p id="circle-show"></p>
-          <button id="result-circle">Resultado</button>
-        </section>
-        <section id="square-area">
-          <h4 class="title">Quadrado</h4>
-          <p class="description">Calcule a área do quadrado</p>
-          <p class="formula">Q = (b²)</p>
-          <label for="base-square">Base</label>
-          <input
-            type="number"
-            name="base-square"
-            id="base-square"
-            placeholder="Digite o valor da base"
-          />
-          <p id="square-show"></p>
-          <button id="result-square">Resultado</button>
-        </section>
-      </div>
-      <div class="math-content" id="arithimetic">
-        <section id="imc-area">
-          <h4 class="title">Ind. Massa Corporal</h4>
-          <p class="description">Calcule o índice de massa corporal</p>
-          <p class="formula">IMC = (m / a²)</p>
-          <label for="mass">Massa</label>
-          <input
-            type="number"
-            name="mass"
-            id="mass"
-            placeholder="Digite a massa (kg)"
-          />
-          <label for="height">Altura</label>
-          <input
-            type="number"
-            name="height"
-            id="height"
-            placeholder="Digite a altura (m)"
-          />
-          <p id="imc-show"></p>
-          <button id="result-imc">Resultado</button>
         </section>
       </div>
     </main>
