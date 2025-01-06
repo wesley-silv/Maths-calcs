@@ -8,7 +8,7 @@
 
 #risk-analysis-area input:focus {
   outline: none;
-  border-color: #d43131;
+  border-color: var(--red-design);
 }
 
 #risk-analysis-area input[type='number']::-webkit-inner-spin-button,
@@ -22,9 +22,9 @@
 }
 
 #risk-analysis-area button {
-  background-color: #ff0000;
+  background-color: var(--red-design);
 }
 
 #risk-analysis-area button:hover {
-  background-color: #d43131;
+  background-color: #bc1b1b;
 }

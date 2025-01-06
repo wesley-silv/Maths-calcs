@@ -1,10 +1,6 @@
-#triangle-area,
-#circle-area,
-#square-area,
 #cost-value,
-#imc-area,
-#percent-area,
 #percent-ratio-area,
+#percent-area,
 #risk-analysis-area {
   text-align: center;
   width: 25%;
@@ -17,25 +13,17 @@
   box-sizing: border-box;
 }
 
-#triangle-area:hover,
-#circle-area:hover,
-#square-area:hover,
 #cost-value:hover,
-#imc-area:hover,
-#percent-area:hover,
 #percent-ratio-area:hover,
+#percent-area:hover,
 #risk-analysis-area:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
 
-#triangle-area .title,
-#circle-area .title,
-#square-area .title,
 #cost-value .title,
-#imc-area .title,
-#percent-area .title,
 #percent-ratio-area .title,
+#percent-area .title,
 #risk-analysis-area .title {
   font-size: 1.5em;
   font-weight: bold;
@@ -43,38 +31,26 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-#triangle-area .description,
-#circle-area .description,
-#square-area .description,
 #cost-value .description,
-#imc-area .description,
-#percent-area .description,
 #percent-ratio-area .description,
+#percent-area .description,
 #risk-analysis-area .description {
   font-size: 1em;
   margin-bottom: 1em;
 }
 
-#triangle-area label,
-#circle-area label,
-#square-area label,
 #cost-value label,
-#imc-area label,
-#percent-area label,
 #percent-ratio-area label,
+#percent-area label,
 #risk-analysis-area label {
   display: block;
   margin: 0.5em 0;
   font-weight: bold;
 }
 
-#triangle-area input,
-#circle-area input,
-#square-area input,
 #cost-value input,
-#imc-area input,
-#percent-area input,
 #percent-ratio-area input,
+#percent-area input,
 #risk-analysis-area input {
   width: calc(100% - 1em);
   padding: 0.5em;
@@ -85,13 +61,9 @@
   transition: border 0.3s ease;
 }
 
-#triangle-area button,
-#circle-area button,
-#square-area button,
 #cost-value button,
-#imc-area button,
-#percent-area button,
 #percent-ratio-area button,
+#percent-area button,
 #risk-analysis-area button {
   color: #fff;
   padding: 0.7em 1em;
@@ -101,49 +73,33 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#triangle-area button:hover,
-#circle-area button:hover,
-#square-area button:hover,
 #cost-value button:hover,
-#imc-area button:hover,
-#percent-area button:hover,
 #percent-ratio-area button:hover,
+#percent-area button:hover,
 #risk-analysis-area button:hover {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 768px) {
-  #triangle-area,
-  #circle-area,
-  #square-area,
   #cost-value,
-  #imc-area,
-  #percent-area,
   #percent-ratio-area,
+  #percent-area,
   #risk-analysis-area {
     width: 80%;
     padding: 1.5em;
   }
 
-  #triangle-area .title,
-  #circle-area .title,
-  #square-area .title,
   #cost-value .title,
-  #imc-area .title,
-  #percent-area .title,
   #percent-ratio-area .title,
+  #percent-area .title,
   #risk-analysis-area .title {
     font-size: 1.4em;
   }
 
-  #triangle-area .formula,
-  #circle-area .formula,
-  #square-area .formula,
   #cost-value .formula,
-  #imc-area .formula,
-  #percent-area .formula,
   #percent-ratio-area .formula,
+  #percent-area .formula,
   #risk-analysis-area .formula {
     font-size: 1em;
   }
