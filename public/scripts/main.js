@@ -11,62 +11,100 @@ function registerOperation(description, value, quantity, result, ticker) {
   realizedOperations.push(operation)
 }
 
-const downloadOptions = document
-  .getElementById('download-options')
-  .addEventListener('change', function () {
-    const selectedOption = this.value
+// Referência ao campo de seleção
+const downloadOptions = document.getElementById('download-options')
 
-    if (realizedOperations.length === 0) {
-      alert(
-        'Nenhuma operação realizada! \nRealize operações para obter os registros.'
-      )
-      return
-    }
+// Evento que dispara automaticamente ao mudar a seleção
+downloadOptions.addEventListener('change', function () {
+  const selectedOption = downloadOptions.value
 
-    switch (selectedOption) {
-      case 'txt':
-        downloadTXT()
-        break
-      case 'pdf':
-        downloadPDF()
-        break
-      case 'xlsx':
-        downloadXLSX()
-        break
-    }
-  })
+  if (!selectedOption) {
+    alert('Selecione um formato válido para o download!')
+    return
+  }
 
-function downloadTXT() {
-  const blob = new Blob([realizedOperations.join('\n')], {
-    type: 'text/plain'
-  })
-  const link = document.createElement('a')
-  link.href = URL.createObjectURL(blob)
-  link.download = 'Operations-file.txt'
-  link.click()
+  if (realizedOperations.length === 0) {
+    alert(
+      'Nenhuma operação realizada! \nRealize operações para obter os registros.'
+    )
+    return
+  }
+
+  // Chama a função correspondente ao formato selecionado
+  switch (selectedOption) {
+    case 'pdf':
+      console.log('Iniciando download em PDF...')
+      downloadPDF()
+      break
+    case 'xlsx':
+      console.log('Iniciando download em Excel...')
+      downloadXLSX()
+      break
+    default:
+      alert('Formato inválido selecionado!') // Apenas por segurança
+  }
+
+  // Reseta o valor do select para o estado inicial
+  downloadOptions.value = ''
+})
+
+// Função simulada para baixar em PDF
+function downloadPDF() {
+  alert('Arquivo PDF baixado com sucesso!')
+  // Implemente a lógica real para download em PDF aqui
+}
+
+// Função simulada para baixar em Excel
+function downloadXLSX() {
+  alert('Arquivo Excel baixado com sucesso!')
+  // Implemente a lógica real para download em Excel aqui
 }
 
 function downloadPDF() {
   const { jsPDF } = window.jspdf
-  const doc = new jsPDF('landscape') // Muda para o formato paisagem (horizontal)
+  const doc = new jsPDF('portrait', 'mm', 'a4') // Retrato (vertical) no formato A4
 
-  const margin = 12 // Margem de 1em (aproximadamente 10-12px)
-  const lineHeight = 10 // Altura entre linhas
+  const margin = 20 // Margem de 20mm (superior, inferior, esquerda e direita)
+  const lineHeight = 10 // Altura entre linhas (em mm)
   const pageHeight = doc.internal.pageSize.height // Altura total da página
+  const pageWidth = doc.internal.pageSize.width // Largura total da página
+  const contentWidth = pageWidth - 2 * margin // Largura utilizável para o texto
   let cursorY = margin // Posição Y inicial (com margem superior)
 
-  realizedOperations.forEach((operation, index) => {
+  // Adiciona um título centralizado na página
+  doc.setFontSize(14) // Define o tamanho da fonte
+  const title = 'Relatório de Operações - MathsCalcs'
+  const titleWidth = doc.getTextWidth(title) // Largura do texto
+  doc.text(title, (pageWidth - titleWidth) / 2, cursorY)
+  cursorY += 15 // Adiciona espaçamento após o título
+
+  // Ajusta o conteúdo das operações
+  doc.setFontSize(12) // Redefine o tamanho da fonte para o conteúdo
+  realizedOperations.forEach(operation => {
+    // Divide o texto em linhas que cabem na largura do conteúdo
+    const lines = doc.splitTextToSize(operation, contentWidth)
+
     // Verifica se a próxima linha vai ultrapassar a altura da página
-    if (cursorY + lineHeight > pageHeight - margin) {
+    if (cursorY + lines.length * lineHeight > pageHeight - margin) {
       doc.addPage() // Adiciona uma nova página se necessário
       cursorY = margin // Reseta o cursorY para o topo da nova página
+
+      // Adiciona um cabeçalho na nova página
+      doc.setFontSize(14)
+      doc.text(title, (pageWidth - titleWidth) / 2, cursorY)
+      cursorY += 15 // Espaçamento após o cabeçalho
+      doc.setFontSize(12) // Volta para o tamanho padrão do conteúdo
     }
 
-    doc.text(operation, margin, cursorY) // Adiciona o texto com margem à esquerda
-    cursorY += lineHeight // Move o cursor para a próxima linha
+    // Adiciona o texto linha por linha
+    lines.forEach(line => {
+      doc.text(line, margin, cursorY)
+      cursorY += lineHeight // Move o cursor para a próxima linha
+    })
   })
 
-  doc.save('Operations-file.pdf')
+  // Salva o arquivo PDF
+  doc.save('Operações-MathsCalcs.pdf')
 }
 
 function downloadXLSX() {
@@ -75,7 +113,7 @@ function downloadXLSX() {
   )
   const wb = XLSX.utils.book_new()
   XLSX.utils.book_append_sheet(wb, ws, 'Operations')
-  XLSX.writeFile(wb, 'Operations-file.xlsx')
+  XLSX.writeFile(wb, 'Operações-MathsCalcs.xlsx')
 }
 
 let totalValue = 0
