@@ -7,7 +7,21 @@ function getCurrentDate() {
 
 function registerOperation(description, value, quantity, result, ticker) {
   const currentDate = getCurrentDate()
-  const operation = `${currentDate} ${description}: Ativo = ${ticker.toUpperCase()}, Valor = ${value}, Quantidade = ${quantity}, Resultado = ${result}`
+  const formattedValue = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(value)
+  const formattedResult = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(result)
+
+  const operation = `
+  Data da consulta:  ${currentDate}    Descrição:  ${description}
+  Código do ativo:    ${ticker.toUpperCase()}                           Valor:       ${formattedValue}
+  Quantidade:          ${quantity}                               Resultado:   ${formattedResult}
+  `
+
   realizedOperations.push(operation)
 }
 
@@ -64,7 +78,7 @@ function downloadPDF() {
   const { jsPDF } = window.jspdf
   const doc = new jsPDF('portrait', 'mm', 'a4') // Retrato (vertical) no formato A4
 
-  const margin = 20 // Margem de 20mm (superior, inferior, esquerda e direita)
+  const margin = 16 // Margem de 20mm (superior, inferior, esquerda e direita)
   const lineHeight = 10 // Altura entre linhas (em mm)
   const pageHeight = doc.internal.pageSize.height // Altura total da página
   const pageWidth = doc.internal.pageSize.width // Largura total da página
@@ -137,10 +151,10 @@ const costValue = document
 
     document.getElementById(
       'cost-value-show'
-    ).innerText = `Preço médio: R$ ${mean.toFixed(2)}`
+    ).innerText = `Preço Médio: R$ ${mean.toFixed(2)}`
     document.getElementById(
       'cost-value-all'
-    ).innerText = `Quantidade: ${totalQuantity.toFixed(0)}`
+    ).innerText = `Quantidade Total: ${totalQuantity.toFixed(0)}`
 
     registerOperation(
       'Preço médio de custo',
@@ -189,7 +203,7 @@ const percentRatioCalc = document
     const percent = (percentRatio / valueRatio) * 100
     document.getElementById(
       'percent-ratio-show'
-    ).innerText = `Relação percentual: ${percent.toFixed(2)}%`
+    ).innerText = `Relação Percentual: ${percent.toFixed(2)}%`
 
     registerOperation(
       'Relação Percentual',
@@ -214,8 +228,8 @@ const riskAnalysisCalc = document
     const riskMargin = (amount * (margin / 100)) / units
     document.getElementById(
       'risk-analysis-show'
-    ).innerText = `Margem de risco: R$ ${riskMargin.toFixed(2)}`
-    document.getElementById('risk-analysis-total').innerText = `Perda: R$ ${(
+    ).innerText = `Margem de Risco: R$ ${riskMargin.toFixed(2)}`
+    document.getElementById('risk-analysis-total').innerText = `Prejuízo: R$ ${(
       riskMargin * units
     ).toFixed(2)}`
 
@@ -225,4 +239,30 @@ const riskAnalysisCalc = document
       margin,
       `R$ ${riskMargin.toFixed(2)}`
     )
+  })
+
+const fundProjection = document
+  .getElementById('calculate-projection')
+  .addEventListener('click', function () {
+    const quotaValue = parseFloat(document.getElementById('quota-value').value)
+    const monthlyIncome = parseFloat(
+      document.getElementById('monthly-income').value
+    )
+    const quantityQuota = parseInt(
+      document.getElementById('quantity-quota').value
+    )
+
+    if (!isNaN(quotaValue) && !isNaN(monthlyIncome) && !isNaN(quantityQuota)) {
+      const totalInvestment = quotaValue * quantityQuota
+      const totalMonthlyEarnings = monthlyIncome * quantityQuota
+
+      document.getElementById(
+        'total-investment'
+      ).textContent = `Investimento Total: R$ ${totalInvestment.toFixed(2)}`
+      document.getElementById(
+        'monthly-earnings'
+      ).textContent = `Rendimento Mensal: R$ ${totalMonthlyEarnings.toFixed(2)}`
+    } else {
+      alert('Por favor, preencha todos os campos com valores válidos.')
+    }
   })

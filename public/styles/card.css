@@ -1,7 +1,8 @@
 #cost-value,
 #percent-ratio-area,
 #percent-area,
-#risk-analysis-area {
+#risk-analysis-area,
+#fund-projection {
   text-align: center;
   width: 25%;
   padding: 2rem 1.2rem;
@@ -16,7 +17,8 @@
 #cost-value:hover,
 #percent-ratio-area:hover,
 #percent-area:hover,
-#risk-analysis-area:hover {
+#risk-analysis-area:hover,
+#fund-projection:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
@@ -24,7 +26,8 @@
 #cost-value .title,
 #percent-ratio-area .title,
 #percent-area .title,
-#risk-analysis-area .title {
+#risk-analysis-area .title,
+#fund-projection-area .title {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -34,7 +37,8 @@
 #cost-value .description,
 #percent-ratio-area .description,
 #percent-area .description,
-#risk-analysis-area .description {
+#risk-analysis-area .description,
+#fund-projection .description {
   font-size: 1em;
   margin-bottom: 1em;
 }
@@ -42,7 +46,8 @@
 #cost-value label,
 #percent-ratio-area label,
 #percent-area label,
-#risk-analysis-area label {
+#risk-analysis-area label,
+#fund-projection label {
   display: block;
   margin: 0.5em 0;
   font-weight: bold;
@@ -51,7 +56,8 @@
 #cost-value input,
 #percent-ratio-area input,
 #percent-area input,
-#risk-analysis-area input {
+#risk-analysis-area input,
+#fund-projection input {
   width: calc(100% - 1em);
   padding: 0.5em;
   margin-bottom: 1em;
@@ -64,7 +70,8 @@
 #cost-value button,
 #percent-ratio-area button,
 #percent-area button,
-#risk-analysis-area button {
+#risk-analysis-area button,
+#fund-projection button {
   color: #fff;
   padding: 0.7em 1em;
   border: none;

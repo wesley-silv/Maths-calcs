@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/percent-ratio.css" />
     <link rel="stylesheet" href="/styles/risk-analysis.css" />
     <link rel="stylesheet" href="/styles/analysis.css" />
+    <link rel="stylesheet" href="/styles/fund-projection" />
 
     <title>Cálculos Financeiros</title>
   </head>
@@ -211,6 +212,26 @@
           <p id="risk-analysis-show"></p>
           <p id="risk-analysis-total"></p>
           <button id="result-risk-analysis">Resultado</button>
+        </section>
+        <section id="fund-projection">
+          <h4 class="title">Projeção de Investimentos</h4>
+          <p class="description">
+            Analise o impacto futuro de seus investimentos em FIIs com base nos
+            valores de cotas e rendimentos mensais.
+          </p>
+          <label for="quota-value">Valor da Cota (R$)</label>
+          <input type="number" id="quota-value" placeholder="Exemplo: 100.00" />
+          <label for="monthly-income">Rendimento Mensal por Cota (R$)</label>
+          <input
+            type="number"
+            id="monthly-income"
+            placeholder="Exemplo: 0.80"
+          />
+          <label for="quantity-quota">Quantidade de Cotas</label>
+          <input type="number" id="quantity-quota" placeholder="Exemplo: 50" />
+          <p id="total-investment" class="result"></p>
+          <p id="monthly-earnings" class="result"></p>
+          <button id="calculate-projection">Calcular</button>
         </section>
       </div>
     </main>
