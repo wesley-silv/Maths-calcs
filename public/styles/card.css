@@ -27,7 +27,7 @@
 #percent-ratio-area .title,
 #percent-area .title,
 #risk-analysis-area .title,
-#fund-projection-area .title {
+#fund-projection .title {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -83,7 +83,8 @@
 #cost-value button:hover,
 #percent-ratio-area button:hover,
 #percent-area button:hover,
-#risk-analysis-area button:hover {
+#risk-analysis-area button:hover,
+#fund-projection button:hover {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -92,7 +93,8 @@
   #cost-value,
   #percent-ratio-area,
   #percent-area,
-  #risk-analysis-area {
+  #risk-analysis-area,
+  #fund-projection {
     width: 80%;
     padding: 1.5em;
   }
@@ -100,14 +102,16 @@
   #cost-value .title,
   #percent-ratio-area .title,
   #percent-area .title,
-  #risk-analysis-area .title {
+  #risk-analysis-area .title,
+  #fund-projection .title {
     font-size: 1.4em;
   }
 
   #cost-value .formula,
   #percent-ratio-area .formula,
   #percent-area .formula,
-  #risk-analysis-area .formula {
+  #risk-analysis-area .formula,
+  #fund-projection .formula {
     font-size: 1em;
   }
 }
