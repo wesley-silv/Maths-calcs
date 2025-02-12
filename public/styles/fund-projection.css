@@ -1,48 +1,29 @@
-#fund-projection {
-  background-color: #fff;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  padding: 20px;
-  max-width: 350px;
-  width: 100%;
-  margin: 20px auto;
+#fund-projection .title,
+#fund-projection .formula,
+#total-investment,
+#monthly-earnings {
+  color: var(--red-design);
 }
 
-#fund-projection .title {
-  color: var(--purple-design);
-  font-weight: bold;
+#fund-projection input:focus {
+  outline: none;
+  border-color: var(--red-design);
 }
 
-#fund-projection .description {
-  font-size: 0.9em;
-  margin-bottom: 15px;
+#fund-projection input[type='number']::-webkit-inner-spin-button,
+#fund-projection input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-#fund-projection input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
+#fund-projection input:checked {
+  visibility: collapse;
 }
 
 #fund-projection button {
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  width: 100%;
+  background-color: var(--red-design);
 }
 
 #fund-projection button:hover {
-  background-color: #45a049;
-}
-
-.result {
-  font-size: 1em;
-  font-weight: bold;
-  color: var(--green-design);
-  margin-top: 10px;
+  background-color: #bc1b1b;
 }

@@ -214,24 +214,28 @@
           <button id="result-risk-analysis">Resultado</button>
         </section>
         <section id="fund-projection">
-          <h4 class="title">Projeção de Investimentos</h4>
+          <h4 class="title">Análise de Rendimentos</h4>
           <p class="description">
-            Analise o impacto futuro de seus investimentos em FIIs com base nos
-            valores de cotas e rendimentos mensais.
+            Analise os rendimentos em relação ao montante e quantidade de
+            ativos.
           </p>
-          <label for="quota-value">Valor da Cota (R$)</label>
-          <input type="number" id="quota-value" placeholder="Exemplo: 100.00" />
-          <label for="monthly-income">Rendimento Mensal por Cota (R$)</label>
+          <label for="quota-value">Valor do ativo</label>
+          <input
+            type="number"
+            id="quota-value"
+            placeholder="Exemplo: 100.00 (R$)"
+          />
+          <label for="monthly-income">Rendimento mensal por ativo</label>
           <input
             type="number"
             id="monthly-income"
-            placeholder="Exemplo: 0.80"
+            placeholder="Exemplo: 0.80 (R$)"
           />
-          <label for="quantity-quota">Quantidade de Cotas</label>
+          <label for="quantity-quota">Quantidade de ativos</label>
           <input type="number" id="quantity-quota" placeholder="Exemplo: 50" />
           <p id="total-investment" class="result"></p>
           <p id="monthly-earnings" class="result"></p>
-          <button id="calculate-projection">Calcular</button>
+          <button id="calculate-projection">Resultado</button>
         </section>
       </div>
     </main>
