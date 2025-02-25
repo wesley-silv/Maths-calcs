@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ferramenta para cálculos financeiros, incluindo preço médio, análise de risco, rendimentos e preço teto de ações."
+    />
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -12,18 +16,12 @@
     />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/select.css" />
     <link rel="stylesheet" href="/styles/modal.css" />
     <link rel="stylesheet" href="/styles/card.css" />
-    <link rel="stylesheet" href="/styles/cost-value.css" />
-    <link rel="stylesheet" href="/styles/percent-ratio.css" />
-    <link rel="stylesheet" href="/styles/risk-analysis.css" />
-    <link rel="stylesheet" href="/styles/analysis.css" />
-    <link rel="stylesheet" href="/styles/fund-projection" />
-
     <title>Cálculos Financeiros</title>
   </head>
   <body>
+    <!-- Navegação -->
     <nav class="navbar">
       <button
         class="navbar-toggler"
@@ -54,6 +52,8 @@
         </select>
       </div>
     </nav>
+
+    <!-- Botão de Informações (Mobile) -->
     <button
       type="button"
       class="btn btn-primary d-block d-md-none text-center"
@@ -63,6 +63,8 @@
     >
       Informações!
     </button>
+
+    <!-- Modal de Informações -->
     <div
       class="modal fade"
       id="mathModal"
@@ -87,7 +89,7 @@
             <p>
               Os cálculos matemáticos são fundamentais em diversas áreas, como
               finanças, engenharia, ciência de dados e tecnologia. Eles nos
-              ajudam a resolver problemas complexos, prever tendências, e
+              ajudam a resolver problemas complexos, prever tendências e
               desenvolver novas tecnologias.
             </p>
             <p>
@@ -108,137 +110,243 @@
         </div>
       </div>
     </div>
-    <h1>Cálculos Financeiros</h1>
+
+    <!-- Conteúdo Principal -->
+    <header>
+      <h1>Cálculos Financeiros</h1>
+    </header>
     <main>
+      <!-- Seção de Cálculos Financeiros -->
       <div class="math-content" id="financial">
-        <section id="cost-value">
-          <h4 class="title">Preço Médio</h4>
+        <!-- Card: Preço Médio -->
+        <section id="cost-value" class="card">
+          <h2 class="title">Preço Médio</h2>
           <p class="description">
-            Calcule o preço médio das ações ou cotas de fundos imobiliários
+            Calcule o preço médio das ações ou cotas de fundos imobiliários.
           </p>
-          <label for="ticker">Código do ativo</label>
-          <input type="text" id="ticker" placeholder="Exemplo: MXRF11" />
-          <label for="values">Preço unitário</label>
-          <input
-            type="number"
-            name="values"
-            id="values"
-            placeholder="Exemplo: R$ 12,85"
-          />
-          <label for="quantities">Quantidade</label>
-          <input
-            type="number"
-            name="quantities"
-            id="quantities"
-            placeholder="Exemplo: 50"
-          />
-          <p id="cost-value-show"></p>
-          <p id="cost-value-all"></p>
-          <button id="result-cost-value">Resultado</button>
+          <form id="cost-value-form">
+            <label for="ticker">Código do ativo</label>
+            <input
+              type="text"
+              id="ticker"
+              placeholder="Exemplo: MXRF11"
+              required
+            />
+            <label for="values">Preço unitário</label>
+            <input
+              type="number"
+              id="values"
+              placeholder="Exemplo: R$ 12,85"
+              required
+            />
+            <label for="quantities">Quantidade</label>
+            <input
+              type="number"
+              id="quantities"
+              placeholder="Exemplo: 50"
+              required
+            />
+            <p id="cost-value-show"></p>
+            <p id="cost-value-all"></p>
+            <button type="submit" id="result-cost-value">
+              Calcular Preço Médio
+            </button>
+          </form>
         </section>
-        <section id="percent-ratio-area">
-          <h4 class="title">Relação Percentual</h4>
+
+        <!-- Card: Relação Percentual -->
+        <section id="percent-ratio-area" class="card">
+          <h2 class="title">Relação Percentual</h2>
           <p class="description">
-            Calcule a relação percentual sobre a aplicação em ativos
+            Calcule a relação percentual sobre a aplicação em ativos.
           </p>
-          <label for="value-ratio">Valor</label>
-          <input
-            type="number"
-            name="value-ratio"
-            id="value-ratio"
-            placeholder="Digite o valor"
-          />
-          <label for="height">Percentual</label>
-          <input
-            type="number"
-            name="percent-ratio"
-            id="percent-ratio"
-            placeholder="Digite a relação percentual"
-          />
-          <p id="percent-ratio-show"></p>
-          <button id="result-percent-ratio">Resultado</button>
+          <form id="percent-ratio-form">
+            <label for="value-ratio">Valor</label>
+            <input
+              type="number"
+              id="value-ratio"
+              placeholder="Digite o valor"
+              required
+            />
+            <label for="percent-ratio">Percentual</label>
+            <input
+              type="number"
+              id="percent-ratio"
+              placeholder="Digite a relação percentual"
+              required
+            />
+            <p id="percent-ratio-show"></p>
+            <button type="submit" id="result-percent-ratio">
+              Calcular Relação Percentual
+            </button>
+          </form>
         </section>
-        <section id="percent-area">
-          <h4 class="title">Porcentagem</h4>
+
+        <!-- Card: Porcentagem -->
+        <section id="percent-area" class="card">
+          <h2 class="title">Porcentagem</h2>
           <p class="description">
-            Calcule o percentual sobre os valores aplicados
+            Calcule o percentual sobre os valores aplicados.
           </p>
-          <label for="value">Valor</label>
-          <input
-            type="number"
-            name="value"
-            id="value"
-            placeholder="Digite o valor"
-          />
-          <label for="height">Percentual</label>
-          <input
-            type="number"
-            name="percent"
-            id="percent"
-            placeholder="Digite o percentual (%)"
-          />
-          <p id="percent-show"></p>
-          <button id="result-percent">Resultado</button>
+          <form id="percent-form">
+            <label for="value">Valor</label>
+            <input
+              type="number"
+              id="value"
+              placeholder="Digite o valor"
+              required
+            />
+            <label for="percent">Percentual</label>
+            <input
+              type="number"
+              id="percent"
+              placeholder="Digite o percentual (%)"
+              required
+            />
+            <p id="percent-show"></p>
+            <button type="submit" id="result-percent">
+              Calcular Porcentagem
+            </button>
+          </form>
         </section>
       </div>
 
+      <!-- Seção de Indicadores -->
       <div class="math-content" id="indicators">
-        <section id="risk-analysis-area">
-          <h4 class="title">Análise de Risco</h4>
+        <!-- Card: Análise de Risco -->
+        <section id="risk-analysis-area" class="card">
+          <h2 class="title">Análise Sobre Riscos / Perdas</h2>
           <p class="description">
-            Calcule o percentual da margem de risco sobre os ativos
+            Calcule o percentual da margem de risco sobre os ativos.
           </p>
-          <label for="amount">Montante</label>
-          <input
-            type="number"
-            name="amount"
-            id="amount"
-            placeholder="Digite o montante (R$)"
-          />
-          <label for="margin">Margem</label>
-          <input
-            type="number"
-            name="margin"
-            id="margin"
-            placeholder="Digite a margem (%)"
-          />
-          <label for="units">Unidades</label>
-          <input
-            type="number"
-            name="units"
-            id="units"
-            placeholder="Digite as unidades"
-          />
-          <p id="risk-analysis-show"></p>
-          <p id="risk-analysis-total"></p>
-          <button id="result-risk-analysis">Resultado</button>
+          <form id="risk-analysis-form">
+            <label for="amount">Montante</label>
+            <input
+              type="number"
+              id="amount"
+              placeholder="Digite o montante (R$)"
+              required
+            />
+            <label for="margin">Margem</label>
+            <input
+              type="number"
+              id="margin"
+              placeholder="Digite a margem (%)"
+              required
+            />
+            <label for="units">Unidades</label>
+            <input
+              type="number"
+              id="units"
+              placeholder="Digite as unidades"
+              required
+            />
+            <p id="risk-analysis-show"></p>
+            <p id="risk-analysis-total"></p>
+            <button type="submit" id="result-risk-analysis">
+              Calcular Risco
+            </button>
+          </form>
         </section>
-        <section id="fund-projection">
-          <h4 class="title">Análise de Rendimentos</h4>
+
+        <!-- Card: Análise de Rendimentos -->
+        <section id="fund-projection" class="card">
+          <h2 class="title">Análise Sobre Rendimentos</h2>
           <p class="description">
             Analise os rendimentos em relação ao montante e quantidade de
             ativos.
           </p>
-          <label for="quota-value">Valor do ativo</label>
-          <input
-            type="number"
-            id="quota-value"
-            placeholder="Exemplo: 100.00 (R$)"
-          />
-          <label for="monthly-income">Rendimento mensal por ativo</label>
-          <input
-            type="number"
-            id="monthly-income"
-            placeholder="Exemplo: 0.80 (R$)"
-          />
-          <label for="quantity-quota">Quantidade de ativos</label>
-          <input type="number" id="quantity-quota" placeholder="Exemplo: 50" />
-          <p id="total-investment" class="result"></p>
-          <p id="monthly-earnings" class="result"></p>
-          <button id="calculate-projection">Resultado</button>
+          <form id="fund-projection-form">
+            <label for="quota-value">Valor do ativo</label>
+            <input
+              type="number"
+              id="quota-value"
+              placeholder="Exemplo: 100.00 (R$)"
+              required
+            />
+            <label for="monthly-income">Rendimento mensal por ativo</label>
+            <input
+              type="number"
+              id="monthly-income"
+              placeholder="Exemplo: 0.80 (R$)"
+              required
+            />
+            <label for="quantity-quota">Quantidade de ativos</label>
+            <input
+              type="number"
+              id="quantity-quota"
+              placeholder="Exemplo: 50"
+              required
+            />
+            <p id="total-investment" class="result"></p>
+            <p id="monthly-earnings" class="result"></p>
+            <button type="submit" id="calculate-projection">
+              Calcular Rendimentos
+            </button>
+          </form>
+        </section>
+
+        <!-- Card: Preço Teto (Décio Bazin) -->
+        <section id="bazin-price" class="card">
+          <h2 class="title">Preço Teto / Décio Bazin</h2>
+          <p class="description">
+            Calcule o preço teto com o método de Décio Bazin.
+          </p>
+          <form id="bazin-price-form">
+            <label for="dividend-yield">Dividend Yield (DY)</label>
+            <input
+              type="number"
+              id="dividend-yield"
+              placeholder="Exemplo: 6.5 (para 6.5%)"
+              required
+            />
+            <label for="average-dividend">Média de Dividendos (12M)</label>
+            <input
+              type="number"
+              id="average-dividend"
+              placeholder="Exemplo: 2.50 (R$)"
+              required
+            />
+            <p id="bazin-price-show"></p>
+            <button type="submit" id="calculate-bazin">
+              Calcular Preço Teto
+            </button>
+          </form>
+        </section>
+
+        <!-- Card: Preço Teto (Benjamin Graham) -->
+        <section id="graham-price" class="card">
+          <h2 class="title">Preço Teto / Benjamin Graham</h2>
+          <p class="description">
+            Calcule o preço teto com o método de Benjamin Graham.
+          </p>
+          <form id="graham-price-form">
+            <label for="earnings-per-share">Lucro por Ação (LPA)</label>
+            <input
+              type="number"
+              id="earnings-per-share"
+              placeholder="Exemplo: 5.00 (R$)"
+              required
+            />
+            <label for="book-value-per-share"
+              >Valor Contábil por Ação (VPA)</label
+            >
+            <input
+              type="number"
+              id="book-value-per-share"
+              placeholder="Exemplo: 15.00 (R$)"
+              required
+            />
+            <p id="graham-price-show"></p>
+            <button type="submit" id="calculate-graham">
+              Calcular Preço Teto
+            </button>
+          </form>
         </section>
       </div>
     </main>
+
+    <!-- Scripts -->
     <script src="/scripts/main.js"></script>
     <script src="/scripts/navbar.js"></script>
     <script

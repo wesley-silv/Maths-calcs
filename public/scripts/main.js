@@ -266,3 +266,69 @@ const fundProjection = document
       alert('Por favor, preencha todos os campos com valores válidos.')
     }
   })
+
+  // Cálculo do Preço Teto (Décio Bazin)
+document
+.getElementById('calculate-bazin')
+.addEventListener('click', function () {
+  const dividendYield = parseFloat(
+    document.getElementById('dividend-yield').value
+  )
+  const averageDividend = parseFloat(
+    document.getElementById('average-dividend').value
+  )
+
+  if (isNaN(dividendYield) || isNaN(averageDividend)) {
+    alert('Por favor, insira valores válidos.')
+    return
+  }
+
+  // Fórmula de Décio Bazin: Preço Teto = (Média de Dividendos * 100) / Dividend Yield
+  const bazinPrice = ((averageDividend * 100) / dividendYield).toFixed(2)
+
+  document.getElementById(
+    'bazin-price-show'
+  ).innerText = `Preço Teto: R$ ${bazinPrice}`
+
+  // Registrar a operação
+  registerOperation(
+    'Preço Teto (Décio Bazin)',
+    averageDividend,
+    dividendYield,
+    bazinPrice
+  )
+})
+
+// Cálculo do Preço Teto (Benjamin Graham)
+document
+.getElementById('calculate-graham')
+.addEventListener('click', function () {
+  const earningsPerShare = parseFloat(
+    document.getElementById('earnings-per-share').value
+  )
+  const bookValuePerShare = parseFloat(
+    document.getElementById('book-value-per-share').value
+  )
+
+  if (isNaN(earningsPerShare) || isNaN(bookValuePerShare)) {
+    alert('Por favor, insira valores válidos.')
+    return
+  }
+
+  // Fórmula de Benjamin Graham: Preço Teto = √(22.5 * LPA * VPA)
+  const grahamPrice = Math.sqrt(22.5 * earningsPerShare * bookValuePerShare).toFixed(
+    2
+  )
+
+  document.getElementById(
+    'graham-price-show'
+  ).innerText = `Preço Teto: R$ ${grahamPrice}`
+
+  // Registrar a operação
+  registerOperation(
+    'Preço Teto (Benjamin Graham)',
+    earningsPerShare,
+    bookValuePerShare,
+    grahamPrice
+  )
+})

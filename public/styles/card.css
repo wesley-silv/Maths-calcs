@@ -1,8 +1,11 @@
+/* Estilos para todos os cards */
 #cost-value,
 #percent-ratio-area,
 #percent-area,
 #risk-analysis-area,
-#fund-projection {
+#fund-projection,
+#bazin-price,
+#graham-price {
   text-align: center;
   width: 25%;
   padding: 2rem 1.2rem;
@@ -18,16 +21,21 @@
 #percent-ratio-area:hover,
 #percent-area:hover,
 #risk-analysis-area:hover,
-#fund-projection:hover {
+#fund-projection:hover,
+#bazin-price:hover,
+#graham-price:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
 
+/* Estilos para títulos e descrições */
 #cost-value .title,
 #percent-ratio-area .title,
 #percent-area .title,
 #risk-analysis-area .title,
-#fund-projection .title {
+#fund-projection .title,
+#bazin-price .title,
+#graham-price .title {
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.5em;
@@ -38,16 +46,21 @@
 #percent-ratio-area .description,
 #percent-area .description,
 #risk-analysis-area .description,
-#fund-projection .description {
+#fund-projection .description,
+#bazin-price .description,
+#graham-price .description {
   font-size: 1em;
   margin-bottom: 1em;
 }
 
+/* Estilos para labels e inputs */
 #cost-value label,
 #percent-ratio-area label,
 #percent-area label,
 #risk-analysis-area label,
-#fund-projection label {
+#fund-projection label,
+#bazin-price label,
+#graham-price label {
   display: block;
   margin: 0.5em 0;
   font-weight: bold;
@@ -57,7 +70,9 @@
 #percent-ratio-area input,
 #percent-area input,
 #risk-analysis-area input,
-#fund-projection input {
+#fund-projection input,
+#bazin-price input,
+#graham-price input {
   width: calc(100% - 1em);
   padding: 0.5em;
   margin-bottom: 1em;
@@ -67,11 +82,14 @@
   transition: border 0.3s ease;
 }
 
+/* Estilos para botões */
 #cost-value button,
 #percent-ratio-area button,
 #percent-area button,
 #risk-analysis-area button,
-#fund-projection button {
+#fund-projection button,
+#bazin-price button,
+#graham-price button {
   color: #fff;
   padding: 0.7em 1em;
   border: none;
@@ -84,17 +102,52 @@
 #percent-ratio-area button:hover,
 #percent-area button:hover,
 #risk-analysis-area button:hover,
-#fund-projection button:hover {
+#fund-projection button:hover,
+#bazin-price button:hover,
+#graham-price button:hover {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos específicos para o card de Análise de Rendimentos */
+#fund-projection .title,
+#fund-projection .result {
+  color: var(--blue-design);
+}
+
+#fund-projection input:focus {
+  outline: none;
+  border-color: #000080;
+}
+
+#fund-projection input[type='number']::-webkit-inner-spin-button,
+#fund-projection input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#fund-projection input:checked {
+  visibility: collapse;
+}
+
+#fund-projection button {
+  margin: 2rem auto;
+  background-color: #3333c8;
+}
+
+#fund-projection button:hover {
+  background-color: #000080;
+}
+
+/* Responsividade */
 @media screen and (max-width: 768px) {
   #cost-value,
   #percent-ratio-area,
   #percent-area,
   #risk-analysis-area,
-  #fund-projection {
+  #fund-projection,
+  #bazin-price,
+  #graham-price {
     width: 80%;
     padding: 1.5em;
   }
@@ -103,15 +156,9 @@
   #percent-ratio-area .title,
   #percent-area .title,
   #risk-analysis-area .title,
-  #fund-projection .title {
+  #fund-projection .title,
+  #bazin-price .title,
+  #graham-price .title {
     font-size: 1.4em;
-  }
-
-  #cost-value .formula,
-  #percent-ratio-area .formula,
-  #percent-area .formula,
-  #risk-analysis-area .formula,
-  #fund-projection .formula {
-    font-size: 1em;
   }
 }
