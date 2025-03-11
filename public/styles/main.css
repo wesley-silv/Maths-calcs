@@ -1,17 +1,27 @@
 :root {
+  /* Paleta de Cores */
   --primary-color: #4caf50;
   --secondary-color: #ffc107;
   --background-color: #f5f5f5;
+  --text-color: #333;
+  --card-bg-color: #fff;
+  --border-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Cores Adicionais */
   --purple-design: #000080;
   --red-design: #ff0000;
   --green-design: #365a36;
   --blue-design: #0000ff;
   --orange-design: #ecbe13;
-  --text-color: #333;
+
+  /* Layout e Tipografia */
   --border-radius: 8px;
   --font-family: 'Arial', sans-serif;
+  --container-width: 1200px;
 }
 
+/* Reset de Estilos */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,6 +32,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
+  line-height: 1.6;
 }
 
 header {
@@ -31,7 +42,7 @@ header {
 
 h1 {
   text-align: center;
-  color: #333;
+  color: var(--text-color);
   margin: 1rem auto 2.4rem;
 }
 
@@ -39,6 +50,12 @@ hr {
   border: 1px solid var(--purple-design);
   width: 50%;
   margin: 0 auto;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .math-content {
@@ -50,21 +67,24 @@ hr {
 }
 
 section {
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px var(--shadow-color);
   padding: 20px;
   max-width: 300px;
   width: 100%;
+  text-align: center;
 }
 
 .title {
-  color: var(--primary-color);
+  color: var(--blue-design);
   margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .description {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -75,26 +95,36 @@ section {
 
 label {
   display: block;
+  text-indent: 1rem;
   margin-bottom: 5px;
   font-weight: bold;
+  text-align: left;
 }
 
 input[type='number'] {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
+  font-size: 1rem;
 }
 
 button {
+  background-color: var(--blue-design);
   color: #fff;
   border: none;
   border-radius: var(--border-radius);
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
   width: 100%;
-  font-size: 1em;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2b2b95;
 }
 
 p {
