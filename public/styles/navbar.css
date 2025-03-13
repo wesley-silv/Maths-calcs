@@ -25,19 +25,33 @@ body {
   border-bottom: 4px solid #113147;
 }
 
+/* Estilos melhorados para o botão de toggle */
 .navbar-toggler {
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  font-size: 24px;
+  background-color: transparent; /* Fundo transparente */
+  color: #fff; /* Cor do ícone/texto */
+  border: none; /* Remove bordas */
+  font-size: 28px; /* Tamanho maior para o ícone */
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 8px 12px; /* Espaçamento interno reduzido */
   border-radius: 5px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+  outline: none; /* Remove o outline padrão */
 }
 
 .navbar-toggler:hover {
-  background-color: #2c6f9d;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Fundo sutil ao passar o mouse */
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5); /* Sombra sutil para foco */
 }
 
 .nav-pills {

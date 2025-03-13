@@ -21,16 +21,16 @@
     <title>Cálculos Financeiros</title>
   </head>
   <body>
-    <!-- Navegação -->
     <nav class="navbar">
       <button
         class="navbar-toggler"
         aria-label="Toggle navigation"
-        onclick="toggleNavbar()"
+        aria-expanded="false"
+        onclick="toggleNavbar(event)"
       >
         &#9776; Menu
       </button>
-      <ul class="nav nav-pills">
+      <ul class="nav nav-pills" id="navbar-links">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/index.html"
             >Cálculos</a
@@ -52,7 +52,6 @@
         </select>
       </div>
     </nav>
-
     <!-- Botão de Informações (Mobile) -->
     <button
       type="button"
