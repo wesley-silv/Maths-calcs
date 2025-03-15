@@ -124,14 +124,14 @@
             Calcule o preço médio das ações ou cotas de fundos imobiliários.
           </p>
           <form id="cost-value-form">
-            <label for="ticker">Código do ativo</label>
+            <label for="ticker">Código do Ativo</label>
             <input
               type="text"
               id="ticker"
               placeholder="Exemplo: MXRF11"
               required
             />
-            <label for="values">Preço unitário</label>
+            <label for="values">Preço Unitário</label>
             <input
               type="number"
               id="values"
@@ -164,14 +164,14 @@
             <input
               type="number"
               id="value-ratio"
-              placeholder="Digite o valor"
+              placeholder="Digite o valor (R$)"
               required
             />
             <label for="percent-ratio">Percentual</label>
             <input
               type="number"
               id="percent-ratio"
-              placeholder="Digite a relação percentual"
+              placeholder="Digite relação (R$)"
               required
             />
             <p id="percent-ratio-show"></p>
@@ -192,14 +192,14 @@
             <input
               type="number"
               id="value"
-              placeholder="Digite o valor"
+              placeholder="Digite o valor (R$)"
               required
             />
-            <label for="percent">Percentual</label>
+            <label for="percent">Porcentagem</label>
             <input
               type="number"
               id="percent"
-              placeholder="Digite o percentual (%)"
+              placeholder="Digite a porcentagem (%)"
               required
             />
             <p id="percent-show"></p>
@@ -256,21 +256,21 @@
             ativos.
           </p>
           <form id="fund-projection-form">
-            <label for="quota-value">Valor do ativo</label>
+            <label for="quota-value">Valor do Ativo</label>
             <input
               type="number"
               id="quota-value"
               placeholder="Exemplo: 100.00 (R$)"
               required
             />
-            <label for="monthly-income">Rendimento mensal por ativo</label>
+            <label for="monthly-income">Rendimento Mensal / Ativo</label>
             <input
               type="number"
               id="monthly-income"
               placeholder="Exemplo: 0.80 (R$)"
               required
             />
-            <label for="quantity-quota">Quantidade de ativos</label>
+            <label for="quantity-quota">Quantidade de Ativos</label>
             <input
               type="number"
               id="quantity-quota"
@@ -312,7 +312,8 @@
             </button>
           </form>
         </section>
-
+      </div>
+      <div class="math-content">
         <!-- Card: Preço Teto (Benjamin Graham) -->
         <section id="graham-price" class="card">
           <h2 class="title">Preço Teto / Benjamin Graham</h2>
@@ -344,7 +345,6 @@
         </section>
       </div>
     </main>
-
     <!-- Scripts -->
     <script src="/scripts/main.js"></script>
     <script src="/scripts/navbar.js"></script>
