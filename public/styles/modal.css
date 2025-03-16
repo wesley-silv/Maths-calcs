@@ -1,5 +1,8 @@
 #informations,
 #informations-mobile {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
@@ -7,17 +10,8 @@
 
 @media (min-width: 768px) {
   #informations {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  #informations-mobile {
-    position: fixed;
-    width: 44%;
-    left: 50%;
+    text-align: center;
+    margin: 0 auto;
     transform: translateX(-50%);
   }
 }
