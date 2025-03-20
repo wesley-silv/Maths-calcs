@@ -1,4 +1,3 @@
-// utils.js
 export function formatCurrency(value) {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',

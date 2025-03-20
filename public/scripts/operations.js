@@ -1,4 +1,3 @@
-// operations.js
 import { formatCurrency, getCurrentDate } from './utils.js'
 
 let realizedOperations = []
