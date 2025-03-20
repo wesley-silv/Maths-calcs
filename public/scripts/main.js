@@ -1,4 +1,3 @@
-// main.js
 import {
   calculateCostValue,
   calculatePercentage,
@@ -46,7 +45,7 @@ document.getElementById('result-percent').addEventListener('click', () => {
   }
 })
 
-// Configuração dos outros eventos de clique...
+// Configs of others click event's...
 
 document
   .getElementById('download-options')
