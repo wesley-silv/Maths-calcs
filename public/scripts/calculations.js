@@ -1,40 +1,28 @@
-// calculations.js
 import { registerOperation } from './operations.js'
 import { validateInput } from './utils.js'
 
-// export function calculateCostValue(ticker, value, quantity) {
-//   validateInput(value, 'Valor inválido!')
-//   validateInput(quantity, 'Quantidade inválida!')
-
-//   const totalValue = value * quantity
-//   const mean = totalValue / quantity
-
-//   registerOperation('Preço médio de custo', value, quantity, mean, ticker)
-//   return { mean, totalValue, quantity }
-// }
-
-const portfolio = {} // Objeto para armazenar os valores acumulados de cada ticker
+const portfolio = {} // Object to stored the accumulated values of each ticker
 
 export function calculateCostValue(ticker, value, quantity) {
   validateInput(value, 'Valor inválido!')
   validateInput(quantity, 'Quantidade inválida!')
 
-  // Se o ticker ainda não estiver no objeto, inicializamos os valores
+  // If the ticker don't yet in object, We initialized the values
   if (!portfolio[ticker]) {
     portfolio[ticker] = { totalValue: 0, totalQuantity: 0 }
   }
 
-  // Atualiza os valores acumulados
+  // Update the accumulated values
   portfolio[ticker].totalValue += value * quantity
   portfolio[ticker].totalQuantity += quantity
 
-  // Calcula o novo preço médio
+  // Calc the new mean cost
   const mean = portfolio[ticker].totalValue / portfolio[ticker].totalQuantity
 
-  // Registra a operação (se necessário)
+  // Register the operation (if need's)
   registerOperation('Preço médio de custo', value, quantity, mean, ticker)
 
-  // Retorna os valores atualizados
+  // Return the update values
   return {
     mean,
     totalValue: portfolio[ticker].totalValue,

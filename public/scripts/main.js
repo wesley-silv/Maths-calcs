@@ -1,4 +1,3 @@
-// main.js
 import {
   calculateCostValue,
   calculatePercentage,
@@ -29,6 +28,7 @@ document.getElementById('result-cost-value').addEventListener('click', () => {
     ).innerText = `Quantidade Total: ${totalQuantity.toFixed(0)}`
   } catch (error) {
     alert(error.message)
+    console.log('Há campos no formulário não preenchidos!')
   }
 })
 
@@ -46,7 +46,7 @@ document.getElementById('result-percent').addEventListener('click', () => {
   }
 })
 
-// Configuração dos outros eventos de clique...
+// Configs of others click event's...
 
 document
   .getElementById('download-options')

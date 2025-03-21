@@ -3,7 +3,7 @@ const XLSX = window.XLSX
 
 export function downloadPDF() {
   const doc = new jsPDF()
-  // Lógica para gerar PDF...
+  // Logical to generate PDF file.
   doc.save('Operações-MathsCalcs.pdf')
 }
 
