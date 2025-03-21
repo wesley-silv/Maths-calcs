@@ -28,6 +28,7 @@ document.getElementById('result-cost-value').addEventListener('click', () => {
     ).innerText = `Quantidade Total: ${totalQuantity.toFixed(0)}`
   } catch (error) {
     alert(error.message)
+    console.log('Há campos no formulário não preenchidos!')
   }
 })
 

@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/select.css" />
+    <link rel="stylesheet" href="/styles/modal.css" />
     <link rel="stylesheet" href="/styles/card.css" />
     <link rel="stylesheet" href="/styles/quotes.css" />
 
@@ -23,11 +23,12 @@
       <button
         class="navbar-toggler"
         aria-label="Toggle navigation"
-        onclick="toggleNavbar()"
+        aria-expanded="false"
+        onclick="toggleNavbar(event)"
       >
         &#9776; Menu
       </button>
-      <ul class="nav nav-pills">
+      <ul class="nav nav-pills" id="navbar-links">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/index.html"
             >Cálculos</a
@@ -37,21 +38,21 @@
           <a class="nav-link" href="/views/quotes.html">Cotações</a>
         </li>
       </ul>
-
       <div class="navbar-right">
         <select
           id="download-options"
           class="select-icon-navbar"
           title="Baixar relatório com operações realizadas"
         >
-          <option value="" disabled selected>Baixar</option>
-          <option value="txt">Texto</option>
-          <option value="pdf">PDF</option>
+          <option value="" disabled selected>Operações</option>
           <option value="xlsx">Excel</option>
+          <option value="pdf">PDF</option>
         </select>
       </div>
     </nav>
-    <h1>Cotações</h1>
+    <header>
+      <h1>Cotações</h1>
+    </header>
     <main class="cotacoes-container">
       <section class="form-section">
         <form id="cotacao-form">
