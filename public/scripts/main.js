@@ -43,10 +43,30 @@ document.getElementById('result-percent').addEventListener('click', () => {
     ).innerText = `Porcentagem: ${percent.toFixed(2)}`
   } catch (error) {
     alert(error.message)
+    console.log('Há campos no formulário não preenchidos!')
   }
 })
 
 // Configs of others click event's...
+
+document
+  .getElementById('result-percent-ratio')
+  .addEventListener('click', () => {
+    const valueRatio = parseFloat(document.getElementById('value').value)
+    const percentRatio = parseFloat(document.getElementById('percent').value)
+
+    try {
+      const percentageRatio = (calculatePercentageRatio(
+        valueRatio,
+        percentRatio
+      ).document.getElementById(
+        'percent-ratio-show'
+      ).innerText = `Relação Percentual: ${percentageRatio.toFixed(2)}`)
+    } catch (error) {
+      alert(error.message)
+      console.log('Há campos no formulário não preenchidos!')
+    }
+  })
 
 document
   .getElementById('download-options')
