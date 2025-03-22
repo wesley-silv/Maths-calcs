@@ -52,21 +52,79 @@ document.getElementById('result-percent').addEventListener('click', () => {
 document
   .getElementById('result-percent-ratio')
   .addEventListener('click', () => {
-    const valueRatio = parseFloat(document.getElementById('value').value)
-    const percentRatio = parseFloat(document.getElementById('percent').value)
+    const valueInput = document.getElementById('value')
+    const percentInput = document.getElementById('percent')
+    const valueRatio = parseFloat(valueInput.value)
+    const percentRatio = parseFloat(percentInput.value)
+
+    // Limpa estilos de erro anteriores
+    valueInput.classList.remove('error')
+    percentInput.classList.remove('error')
 
     try {
-      const percentageRatio = (calculatePercentageRatio(
-        valueRatio,
-        percentRatio
-      ).document.getElementById(
+      // Validação dos campos
+      if (isNaN(valueRatio) || isNaN(percentRatio)) {
+        throw new Error(
+          'Por favor, preencha todos os campos com valores numéricos.'
+        )
+      }
+
+      // Cálculo da relação percentual
+      const percentageRatio = calculatePercentageRatio(valueRatio, percentRatio)
+
+      // Exibe o resultado
+      document.getElementById(
         'percent-ratio-show'
-      ).innerText = `Relação Percentual: ${percentageRatio.toFixed(2)}`)
+      ).innerText = `Relação Percentual: ${percentageRatio.toFixed(2)}`
+
+      // Exibe um modal de sucesso
+      showModal('Sucesso!', 'O cálculo foi realizado com sucesso.', 'success')
     } catch (error) {
-      alert(error.message)
-      console.log('Há campos no formulário não preenchidos!')
+      // Destaca os campos inválidos
+      if (isNaN(valueRatio)) valueInput.classList.add('error')
+      if (isNaN(percentRatio)) percentInput.classList.add('error')
+
+      // Exibe um modal de erro
+      showModal('Erro', error.message, 'error')
+      console.error('Erro:', error.message)
     }
   })
+
+// Função para exibir um modal personalizado
+function showModal(title, message, type) {
+  // Cria o modal
+  const modal = document.createElement('div')
+  modal.className = 'modal'
+  modal.innerHTML = `
+    <div class="modal-content ${type}">
+      <h2>${title}</h2>
+      <p>${message}</p>
+      <button id="close-modal-button">Fechar</button>
+    </div>
+  `
+
+  // Adiciona o modal ao body
+  document.body.appendChild(modal)
+
+  // Adiciona uma classe para exibir o modal
+  setTimeout(() => {
+    modal.classList.add('show')
+  }, 10)
+
+  // Adiciona um event listener ao botão "Fechar"
+  const closeButton = modal.querySelector('#close-modal-button')
+  closeButton.addEventListener('click', () => closeModal(modal))
+}
+
+// Função para fechar o modal
+function closeModal(modal) {
+  if (modal) {
+    modal.classList.remove('show')
+    setTimeout(() => {
+      modal.remove()
+    }, 300) // Tempo para a animação de fadeOut
+  }
+}
 
 document
   .getElementById('download-options')
