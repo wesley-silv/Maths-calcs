@@ -19,6 +19,7 @@ export function registerOperation(
   }
   realizedOperations.push(operation)
 }
+console.log('Coletando as inserções no array:', realizedOperations)
 
 export function getOperations() {
   return realizedOperations
