@@ -9,30 +9,34 @@ import {
 } from './calculations.js'
 import { downloadPDF, downloadXLSX } from './download.js'
 
-document.getElementById('result-cost-value').addEventListener('click', () => {
-  const ticker = document.getElementById('ticker').value.trim()
-  const value = parseFloat(document.getElementById('values').value)
-  const quantity = parseFloat(document.getElementById('quantities').value)
+document
+  .getElementById('result-cost-value')
+  .addEventListener('click', event => {
+    event.preventDefault()
+    const ticker = document.getElementById('ticker').value.trim()
+    const value = parseFloat(document.getElementById('values').value)
+    const quantity = parseFloat(document.getElementById('quantities').value)
 
-  try {
-    const {
-      mean,
-      totalValue,
-      quantity: totalQuantity
-    } = calculateCostValue(ticker, value, quantity)
-    document.getElementById(
-      'cost-value-show'
-    ).innerText = `Preço Médio: R$ ${mean.toFixed(2)}`
-    document.getElementById(
-      'cost-value-all'
-    ).innerText = `Quantidade Total: ${totalQuantity.toFixed(0)}`
-  } catch (error) {
-    alert(error.message)
-    console.log('Há campos no formulário não preenchidos!')
-  }
-})
+    try {
+      const {
+        mean,
+        totalValue,
+        quantity: totalQuantity
+      } = calculateCostValue(ticker, value, quantity)
+      document.getElementById(
+        'cost-value-show'
+      ).innerText = `Preço Médio: R$ ${mean.toFixed(2)}`
+      document.getElementById(
+        'cost-value-all'
+      ).innerText = `Quantidade Total: ${totalQuantity.toFixed(0)}`
+    } catch (error) {
+      alert(error.message)
+      console.log('Há campos no formulário não preenchidos!')
+    }
+  })
 
-document.getElementById('result-percent').addEventListener('click', () => {
+document.getElementById('result-percent').addEventListener('click', event => {
+  event.preventDefault()
   const value = parseFloat(document.getElementById('value').value)
   const percentValue = parseFloat(document.getElementById('percent').value)
 
@@ -51,7 +55,8 @@ document.getElementById('result-percent').addEventListener('click', () => {
 
 document
   .getElementById('result-percent-ratio')
-  .addEventListener('click', () => {
+  .addEventListener('click', event => {
+    event.preventDefault()
     const valueInput = document.getElementById('value')
     const percentInput = document.getElementById('percent')
     const valueRatio = parseFloat(valueInput.value)
@@ -65,7 +70,7 @@ document
       // Validação dos campos
       if (isNaN(valueRatio) || isNaN(percentRatio)) {
         throw new Error(
-          'Por favor, preencha todos os campos com valores numéricos.'
+          'Por favor, preencha todos os campos com valores numéricos e/ou caracteres.'
         )
       }
 
