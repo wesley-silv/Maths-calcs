@@ -1,33 +1,39 @@
 import { registerOperation } from './operations.js'
 import { validateInput } from './utils.js'
 
-const portfolio = {} // Object to stored the accumulated values of each ticker
-
 export function calculateCostValue(ticker, value, quantity) {
-  validateInput(value, 'Valor inválido!')
-  validateInput(quantity, 'Quantidade inválida!')
-
-  // If the ticker don't yet in object, We initialized the values
-  if (!portfolio[ticker]) {
-    portfolio[ticker] = { totalValue: 0, totalQuantity: 0 }
+  // Validações básicas
+  if (typeof ticker !== 'string' || !ticker.trim()) {
+    throw new Error('Código do ativo inválido!')
+  }
+  if (isNaN(value) || value <= 0) {
+    throw new Error('Valor inválido!')
+  }
+  if (isNaN(quantity) || quantity <= 0) {
+    throw new Error('Quantidade inválida!')
   }
 
-  // Update the accumulated values
-  portfolio[ticker].totalValue += value * quantity
-  portfolio[ticker].totalQuantity += quantity
+  // Inicializa o portfolio se não existir (assumindo que é um objeto global)
+  window.portfolio = window.portfolio || {}
 
-  // Calc the new mean cost
-  const mean = portfolio[ticker].totalValue / portfolio[ticker].totalQuantity
+  // Se o ticker ainda não está no objeto, inicializamos os valores
+  if (!window.portfolio[ticker]) {
+    window.portfolio[ticker] = { totalValue: 0, totalQuantity: 0 }
+  }
 
-  // Register the operation (if need's)
+  // Atualiza os valores acumulados
+  window.portfolio[ticker].totalValue += value * quantity
+  window.portfolio[ticker].totalQuantity += quantity
+
+  // Calcula o novo preço médio
+  const mean =
+    window.portfolio[ticker].totalValue / window.portfolio[ticker].totalQuantity
+
+  // Registra a operação (se necessário)
   registerOperation('Preço médio de custo', value, quantity, mean, ticker)
 
-  // Return the update values
-  return {
-    mean,
-    totalValue: portfolio[ticker].totalValue,
-    quantity: portfolio[ticker].totalQuantity
-  }
+  // Retorna apenas o preço médio (para compatibilidade com o código principal)
+  return { mean }
 }
 
 export function calculatePercentage(value, percentValue) {
