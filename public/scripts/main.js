@@ -7,37 +7,52 @@ import {
   calculateBazinPrice,
   calculateGrahamPrice
 } from './calculations.js'
+import { showModal } from './utils.js'
 import { downloadPDF, downloadXLSX } from './download.js'
 
 document
   .getElementById('result-cost-value')
   .addEventListener('click', event => {
     event.preventDefault()
-    const ticker = document.getElementById('ticker').value.trim()
-    const value = parseFloat(document.getElementById('values').value)
-    const quantity = parseFloat(document.getElementById('quantities').value)
+    const tickerInput = document.getElementById('ticker')
+    const valueInput = document.getElementById('values')
+    const quantityInput = document.getElementById('quantities')
+
+    const ticker = tickerInput.value.trim()
+    const valueCost = parseFloat(valueInput.value)
+    const quantityCost = parseFloat(quantityInput.value)
+
+    // Limpa estilos de erros anteriores
+    tickerInput.classList.remove('error')
+    valueInput.classList.remove('error')
+    quantityInput.classList.remove('error')
 
     try {
-      const {
-        mean,
-        totalValue,
-        quantity: totalQuantity
-      } = calculateCostValue(ticker, value, quantity)
+      if (!ticker || isNaN(valueCost) || isNaN(quantityCost)) {
+        throw new Error(
+          'Por favor, preencha o código do ativo e os campos com valores numéricos.'
+        )
+      }
+
+      const result = calculateCostValue(ticker, valueCost, quantityCost)
+
       document.getElementById(
         'cost-value-show'
-      ).innerText = `Preço Médio: R$ ${mean.toFixed(2)}`
-      document.getElementById(
-        'cost-value-all'
-      ).innerText = `Quantidade Total: ${totalQuantity.toFixed(0)}`
+      ).innerText = `Preço Médio: ${result.mean.toFixed(2)}`
+      showModal('Sucesso!', 'O cálculo foi realizado com sucesso.', 'success')
     } catch (error) {
-      alert(error.message)
-      console.log('Há campos no formulário não preenchidos!')
+      if (!ticker) tickerInput.classList.add('error')
+      if (isNaN(valueCost)) valueInput.classList.add('error')
+      if (isNaN(quantityCost)) quantityInput.classList.add('error')
+
+      showModal('Erro', error.message, 'error')
+      console.error('Erro:', error.message)
     }
   })
 
 document
   .getElementById('result-percent-ratio')
-  .addEventListener('click', event => {
+  .addEventListener('click', event => { 
     event.preventDefault()
     const valueInput = document.getElementById('value-ratio')
     const percentInput = document.getElementById('percent-ratio')
@@ -76,52 +91,6 @@ document
       console.error('Erro:', error.message)
     }
   })
-
-// Função para exibir um modal personalizado
-function showModal(title, message, type) {
-  // Cria o modal
-  const modal = document.createElement('div')
-  modal.className = 'modal'
-  modal.innerHTML = `
-    <div class="modal-content ${type}">
-      <h2>${title}</h2>
-      <p>${message}</p>
-     ${
-       type === 'error' ? '<button id="close-modal-button">Fechar</button>' : ''
-     }
-    </div>
-  `
-
-  // Adiciona o modal ao body
-  document.body.appendChild(modal)
-
-  // Adiciona uma classe para exibir o modal
-  setTimeout(() => {
-    modal.classList.add('show')
-  }, 10)
-
-  // Configura o fechamento baseado no tipo
-  if (type === 'success') {
-    // Fecha automaticamente após 10 segundos (10000 milisegundos)
-    setTimeout(() => {
-      closeModal(modal)
-    }, 1000)
-  } else {
-    // Adiciona um event listener ao botão "Fechar"
-    const closeButton = modal.querySelector('#close-modal-button')
-    closeButton.addEventListener('click', () => closeModal(modal))
-  }
-}
-
-// Função para fechar o modal
-function closeModal(modal) {
-  if (modal) {
-    modal.classList.remove('show')
-    setTimeout(() => {
-      modal.remove()
-    }, 300) // Tempo para a animação de fadeOut
-  }
-}
 
 document.getElementById('result-percent').addEventListener('click', event => {
   event.preventDefault()
