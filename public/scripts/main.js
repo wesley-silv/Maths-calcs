@@ -39,6 +39,10 @@ document
       document.getElementById(
         'cost-value-show'
       ).innerText = `Preço Médio: ${result.mean.toFixed(2)}`
+      document.getElementById(
+        'cost-value-all'
+      ).innerText = `Quantidade Total: ${result.updateQuantity}`
+
       showModal('Sucesso!', 'O cálculo foi realizado com sucesso.', 'success')
     } catch (error) {
       if (!ticker) tickerInput.classList.add('error')
@@ -52,7 +56,7 @@ document
 
 document
   .getElementById('result-percent-ratio')
-  .addEventListener('click', event => { 
+  .addEventListener('click', event => {
     event.preventDefault()
     const valueInput = document.getElementById('value-ratio')
     const percentInput = document.getElementById('percent-ratio')
