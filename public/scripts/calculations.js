@@ -23,7 +23,7 @@ export function calculateCostValue(ticker, value, quantity) {
 
   // Atualiza os valores acumulados
   window.portfolio[ticker].totalValue += value * quantity
-  window.portfolio[ticker].totalQuantity += quantity
+  const updateQuantity = (window.portfolio[ticker].totalQuantity += quantity)
 
   // Calcula o novo preço médio
   const mean =
@@ -33,7 +33,7 @@ export function calculateCostValue(ticker, value, quantity) {
   registerOperation('Preço médio de custo', value, quantity, mean, ticker)
 
   // Retorna apenas o preço médio (para compatibilidade com o código principal)
-  return { mean }
+  return { mean, updateQuantity }
 }
 
 export function calculatePercentage(value, percentValue) {
