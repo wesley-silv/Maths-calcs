@@ -36,12 +36,12 @@ export function calculateCostValue(ticker, value, quantity) {
   return { mean, updateQuantity }
 }
 
-export function calculatePercentage(value, percentValue) {
-  validateInput(value, 'Valor inválido!')
-  validateInput(percentValue, 'Porcentagem inválida!')
+export function calculatePercentage(valuePercentage, percentPercentage) {
+  validateInput(valuePercentage, 'Valor inválido!')
+  validateInput(percentPercentage, 'Porcentagem inválida!')
 
-  const percent = (value / 100) * percentValue
-  registerOperation('Porcentagem', value, percentValue, percent)
+  const percent = (valuePercentage / 100) * percentPercentage
+  registerOperation('Porcentagem', valuePercentage, percentPercentage, percent)
   return percent
 }
 

@@ -7,7 +7,7 @@ import {
   calculateBazinPrice,
   calculateGrahamPrice
 } from './calculations.js'
-import { showModal } from './utils.js'
+import { showModal, validateInput } from './utils.js'
 import { downloadPDF, downloadXLSX } from './download.js'
 
 document
@@ -43,7 +43,7 @@ document
         'cost-value-all'
       ).innerText = `Quantidade Total: ${result.updateQuantity}`
 
-      showModal('Sucesso!', 'O cálculo foi realizado com sucesso.', 'success')
+      showModal('Sucesso', 'Cálculo realizado com sucesso.', 'success')
     } catch (error) {
       if (!ticker) tickerInput.classList.add('error')
       if (isNaN(valueCost)) valueInput.classList.add('error')
@@ -81,10 +81,10 @@ document
       // Exibe o resultado
       document.getElementById(
         'percent-ratio-show'
-      ).innerText = `Relação Percentual: ${percentageRatio.toFixed(2)}`
+      ).innerText = `Relação Percentual: ${percentageRatio.toFixed(2)}%`
 
       // Exibe um modal de sucesso
-      showModal('Sucesso!', 'O cálculo foi realizado com sucesso.', 'success')
+      showModal('Sucesso', 'Cálculo realizado com sucesso.', 'success')
     } catch (error) {
       // Destaca os campos inválidos
       if (isNaN(valueRatio)) valueInput.classList.add('error')
@@ -98,17 +98,34 @@ document
 
 document.getElementById('result-percent').addEventListener('click', event => {
   event.preventDefault()
-  const value = parseFloat(document.getElementById('value').value)
-  const percentValue = parseFloat(document.getElementById('percent').value)
+  const valueInput = document.getElementById('value')
+  const percentInput = document.getElementById('percent')
+  const valuePercentage = parseFloat(valueInput.value)
+  const percentPercentage = parseFloat(percentInput.value)
+
+  valueInput.classList.remove('error')
+  percentInput.classList.remove('error')
 
   try {
-    const percent = calculatePercentage(value, percentValue)
+    if (isNaN(valuePercentage) || isNaN(percentPercentage)) {
+      throw new Error(
+        'Por favor, preencha todos os campos com valores numéricos e/ou caracteres.'
+      )
+    }
+
+    const percentage = calculatePercentage(valuePercentage, percentPercentage)
+
     document.getElementById(
       'percent-show'
-    ).innerText = `Porcentagem: ${percent.toFixed(2)}`
+    ).innerText = `Porcentagem: ${percentage.toFixed(2)}`
+
+    showModal('Sucesso', 'Cálculo realizado com sucesso.', 'success')
   } catch (error) {
-    alert(error.message)
-    console.log('Há campos no formulário não preenchidos!')
+    if (isNaN(valuePercentage)) valueInput.classList.add('error')
+    if (isNaN(percentPercentage)) percentInput.classList.add('error')
+
+    showModal('Erro', error.message, 'error')
+    console.error('Erro:', error.message)
   }
 })
 
