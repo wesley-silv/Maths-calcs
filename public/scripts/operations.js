@@ -1,6 +1,6 @@
 import { formatCurrency, getCurrentDate } from './utils.js'
 
-let realizedOperations = []
+export let realizedOperations = []
 
 export function registerOperation(
   description,
