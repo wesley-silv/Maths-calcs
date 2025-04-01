@@ -120,6 +120,7 @@ document.getElementById('result-percent').addEventListener('click', event => {
     ).innerText = `Porcentagem: ${percentage.toFixed(2)}`
 
     showModal('Sucesso', 'Cálculo realizado com sucesso.', 'success')
+    
   } catch (error) {
     if (isNaN(valuePercentage)) valueInput.classList.add('error')
     if (isNaN(percentPercentage)) percentInput.classList.add('error')

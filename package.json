@@ -19,6 +19,7 @@
     "express": "^4.21.1",
     "jspdf": "^3.0.0",
     "node-fetch": "^3.3.2",
+    "pdfmake": "^0.2.18",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
