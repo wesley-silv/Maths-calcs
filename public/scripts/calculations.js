@@ -30,7 +30,7 @@ export function calculateCostValue(ticker, value, quantity) {
     window.portfolio[ticker].totalValue / window.portfolio[ticker].totalQuantity
 
   // Registra a operação (se necessário)
-  registerOperation('Preço médio de custo', value, quantity, mean, ticker)
+  registerOperation('Preço Médio de Custo', value, quantity, mean, ticker)
 
   // Retorna apenas o preço médio (para compatibilidade com o código principal)
   return { mean, updateQuantity }
