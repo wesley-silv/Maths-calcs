@@ -9,14 +9,6 @@
   border-radius: 5px;
 }
 
-@media (min-width: 768px) {
-  #informations {
-    text-align: center;
-    margin: 0 auto;
-    transform: translateX(-50%);
-  }
-}
-
 /* Error Modal */
 .modal {
   position: fixed;
@@ -67,4 +59,18 @@
 /* Estilos para campos inválidos */
 .error {
   border: 1px solid red;
+}
+
+@media (min-width: 768px) {
+  #informations {
+    text-align: center;
+    margin: 0 auto;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 425px) {
+  .modal-content {
+    width: 90%;
+  }
 }
