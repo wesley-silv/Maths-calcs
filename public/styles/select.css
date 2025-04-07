@@ -1,78 +1,80 @@
-/* Estilos semelhantes aos botões */
+/* Estilos melhorados para o select - Tema Azul */
 .select-icon-navbar {
-  color: #ecf0f1;
-  background-color: transparent;
-  border: none;
-  border-radius: 5px;
-  font-size: 17px;
+  color: #ffffff; /* Texto branco */
+  background-color: rgba(
+    52,
+    152,
+    219,
+    0.9
+  ); /* Azul principal com 90% de opacidade */
+  border: 1px solid rgba(41, 128, 185, 0.8); /* Borda azul mais escura */
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  padding: 8px 10px;
-  appearance: none; /* Remove o estilo padrão do select */
+  transition: all 0.3s ease;
+  padding: 8px 32px 8px 12px;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  text-align: center;
-  font-weight: bold;
+  font-weight: 500;
+  width: 160px;
+  position: relative;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff' width='18px' height='18px'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  box-shadow: 0 2px 8px rgba(41, 128, 185, 0.2);
 }
 
-/* Estilo do hover similar aos botões */
+/* Estilo do hover - Efeito de brilho azul */
 .select-icon-navbar:hover {
-  background-color: var(--purple-design);
-  color: #fff;
+  background-color: rgba(41, 128, 185, 0.95); /* Azul mais escuro no hover */
+  border-color: rgba(31, 97, 141, 0.9);
+  box-shadow: 0 2px 12px rgba(41, 128, 185, 0.3);
+  transform: translateY(-1px);
 }
 
-/* Reduz o tamanho do select */
-.select-icon-navbar {
-  width: 150px; /* Tamanho ajustável conforme o necessário */
+/* Estilo do focus - Destaque com borda mais clara */
+.select-icon-navbar:focus {
+  outline: none;
+  border-color: #d4e6f1;
+  box-shadow: 0 0 0 3px rgba(174, 214, 241, 0.5);
 }
 
-/* Alinha o select à direita da página */
+/* Estilo das opções do dropdown */
+.select-icon-navbar option {
+  background-color: #3498db; /* Azul base */
+  color: #ffffff;
+  padding: 8px;
+}
+
+/* Estilo das opções quando hover no dropdown */
+.select-icon-navbar option:hover {
+  background-color: #2980b9 !important; /* Azul mais escuro */
+}
+
+/* Estilo para a opção selecionada (desabilitada) */
+.select-icon-navbar option[disabled] {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #3498db;
+  font-style: italic;
+}
+
+/* Melhorias no container */
 .navbar-right {
   margin-left: auto;
   display: flex;
   align-items: center;
-}
-
-/* Estilos dos botões da navbar */
-.btn-icon-navbar {
-  color: #ecf0f1;
-  border: none;
-  font-size: 17px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  padding: 8px 10px;
-}
-
-.btn-icon-navbar:hover {
-  background-color: #3498db;
-  color: #fff;
-}
-
-/* Ícones de download */
-.bi-download {
-  font-size: 16px;
-  font-weight: bold;
+  gap: 10px;
 }
 
 /* Ajustes de responsividade */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .nav-pills {
-    flex-direction: column;
-  }
-
-  .select-icon-navbar,
-  .btn-icon-navbar {
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .nav-pills {
-    gap: 15px;
-    align-items: center;
+  .select-icon-navbar {
+    width: 140px;
+    font-size: 15px;
+    padding: 7px 28px 7px 10px;
+    background-size: 16px;
+    background-position: right 8px center;
   }
 }
