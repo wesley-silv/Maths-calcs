@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="/styles/cards.css" />
     <title>Cálculos Financeiros</title>
   </head>
+
   <body>
+    <!-- Barra de navegação -->
     <nav class="navbar">
       <button
         class="navbar-toggler"
@@ -31,6 +33,7 @@
       >
         &#9776; Menu
       </button>
+
       <ul class="nav nav-pills" id="navbar-links">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/index.html"
@@ -41,6 +44,7 @@
           <a class="nav-link" href="/views/quotes.html">Cotações</a>
         </li>
       </ul>
+
       <div class="navbar-right">
         <select
           id="download-options"
@@ -53,9 +57,12 @@
         </select>
       </div>
     </nav>
+
+    <!-- Cabeçalho -->
     <header>
       <h1>Cálculos Financeiros</h1>
-      <!-- Button of information (Mobile) -->
+
+      <!-- Botão de informações (Mobile) -->
       <button
         type="button"
         class="btn btn-primary d-block d-md-none text-center"
@@ -65,7 +72,8 @@
       >
         Informações!
       </button>
-      <!-- Modal card -->
+
+      <!-- Modal de informações -->
       <div
         class="modal fade"
         id="mathModal"
@@ -86,6 +94,7 @@
                 aria-label="Close"
               ></button>
             </div>
+
             <div class="modal-body">
               <p>
                 Os cálculos matemáticos são fundamentais em diversas áreas, como
@@ -99,6 +108,7 @@
                 base para inovações e soluções que impactam o mundo moderno.
               </p>
             </div>
+
             <div class="modal-footer">
               <button
                 type="button"
@@ -112,10 +122,12 @@
         </div>
       </div>
     </header>
+
+    <!-- Conteúdo principal -->
     <main>
-      <!-- Section of financial calcs -->
+      <!-- Seção de cálculos financeiros -->
       <div class="math-content" id="financial">
-        <!--Cost Value Card -->
+        <!-- Card de Preço Médio -->
         <section id="cost-value" class="card premium-card">
           <div class="card-header premium-header">
             <div class="icon-container premium-icon">
@@ -130,7 +142,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <line x1="16" y1="1" x2="8" y2="23"></line>
                 <path
                   d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
                 ></path>
@@ -143,11 +155,11 @@
           <div class="card-body premium-body">
             <div class="description premium-description">
               <strong>Análise Custo Médio</strong>
-              <span class="main-text"
-                >Calcule o preço médio dos ativos considerando compras em
+              <span class="main-text">
+                Calcule o preço médio dos ativos considerando compras em
                 diferentes valores. Ótimo para acompanhar investimentos e
-                estratégias.</span
-              >
+                estratégias.
+              </span>
               <span class="detail"
                 >Fórmula: Total investido ÷ Quantidade de ativos</span
               >
@@ -165,17 +177,11 @@
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
                   >
-                    <path d="M12 2v4"></path>
-                    <path d="m16 6 3-3"></path>
-                    <path d="M18 9h4"></path>
-                    <path d="m16 18 3 3"></path>
-                    <path d="M12 22v-4"></path>
-                    <path d="m8 18-3 3"></path>
-                    <path d="M6 15H2"></path>
-                    <path d="m8 6-3-3"></path>
+                    <path
+                      d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"
+                    ></path>
+                    <line x1="4" y1="22" x2="4" y2="15"></line>
                   </svg>
                   <input
                     type="text"
@@ -283,10 +289,25 @@
           </div>
         </section>
 
-        <!-- Ratio Percent Card -->
+        <!-- Card de Relação Percentual -->
         <section id="percent-ratio-area" class="card premium-card">
           <div class="card-header premium-header">
-            <div class="icon-container premium-icon icon-ratio"></div>
+            <div class="icon-container premium-icon icon-ratio">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+                <path d="M18 6L6 18"></path>
+              </svg>
+            </div>
             <h2 class="title">Relação Percentual</h2>
             <span class="premium-badge">Cálculo Exato</span>
           </div>
@@ -294,11 +315,11 @@
           <div class="card-body premium-body">
             <div class="description premium-description">
               <strong>Análise Proporcional</strong>
-              <span class="main-text"
-                >Calcule qual percentual um valor representa sobre outro.
+              <span class="main-text">
+                Calcule qual percentual um valor representa sobre outro.
                 Essencial para análise e alocação de ativos na carteira de
-                investimentos.</span
-              >
+                investimentos.
+              </span>
               <span class="detail"
                 >Fórmula: (Valor parcial ÷ Valor total) × 100</span
               >
@@ -394,32 +415,60 @@
           </div>
         </section>
 
-        <!-- Percent Card -->
+        <!-- Card de Porcentagem -->
         <section id="percent-area" class="card premium-card">
           <div class="card-header premium-header">
-            <div class="icon-container premium-icon icon-percent"></div>
+            <div class="icon-container premium-icon icon-percent">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M19 5L5 19"></path>
+                <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                <circle cx="17.5" cy="17.5" r="2.5"></circle>
+              </svg>
+            </div>
             <h2 class="title">Porcentagem</h2>
             <span class="premium-badge">Precisão Matemática</span>
           </div>
-          
+
           <div class="card-body premium-body">
             <div class="description premium-description">
               <strong>Calculadora Percentual</strong>
-              <span class="main-text"
-                >Calcule valores percentuais sobre qualquer montante. Use para
-                estimar rendimentos, descontos ou participações em investimentos e
-                negócios.</span
+              <span class="main-text">
+                Calcule valores percentuais sobre qualquer montante. Use para
+                estimar rendimentos, descontos ou participações em investimentos
+                e negócios.
+              </span>
+              <span class="detail"
+                >Fórmula: Valor base × (Percentual ÷ 100)</span
               >
-              <span class="detail">Fórmula: Valor base × (Percentual ÷ 100)</span>
             </div>
-        
+
             <form id="percent-form" class="premium-form">
               <div class="form-group">
                 <label for="value">Valor</label>
                 <div class="input-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    <path
+                      d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                    ></path>
                   </svg>
                   <input
                     type="number"
@@ -430,11 +479,21 @@
                   />
                 </div>
               </div>
-        
+
               <div class="form-group">
                 <label for="percent">Porcentagem</label>
                 <div class="input-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <circle cx="12" cy="12" r="10"></circle>
                     <line x1="12" y1="8" x2="12" y2="16"></line>
                     <line x1="8" y1="12" x2="16" y2="12"></line>
@@ -448,53 +507,93 @@
                   />
                 </div>
               </div>
-        
+
               <div class="result-container">
                 <p id="percent-show" class="premium-result"></p>
               </div>
-        
+
               <button type="submit" id="result-percent" class="premium-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
                 Calcular Porcentagem
               </button>
             </form>
           </div>
-          
+
           <div class="card-footer premium-footer">
             <span>Cálculos confiáveis</span>
           </div>
         </section>
+      </div>
 
-      <!-- Section of indicators -->
+      <!-- Seção de indicadores -->
       <div class="math-content" id="indicators">
-        <!-- Risk Analysis Card -->
+        <!-- Card de Análise de Risco -->
         <section id="risk-analysis-area" class="card premium-card">
           <div class="card-header premium-header">
-            <div class="icon-container premium-icon icon-risk"></div>
+            <div class="icon-container premium-icon icon-risk">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                ></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12" y2="17"></line>
+              </svg>
+            </div>
             <h2 class="title">Análise de Risco</h2>
             <span class="premium-badge">Proteção Financeira</span>
           </div>
-          
+
           <div class="card-body premium-body">
             <div class="description premium-description">
               <strong>Gerenciamento de Risco</strong>
-              <span class="main-text"
-                >Calcule sua exposição ao risco considerando margem de segurança e
-                tamanho da posição. Fundamental para operações
-                disciplinadas.</span
+              <span class="main-text">
+                Calcule sua exposição ao risco considerando margem de segurança
+                e tamanho da posição. Fundamental para operações disciplinadas.
+              </span>
+              <span class="detail"
+                >Fórmula: (Montante × Margem) × Unidades</span
               >
-              <span class="detail">Fórmula: (Montante × Margem) × Unidades</span>
             </div>
-        
+
             <form id="risk-analysis-form" class="premium-form">
               <div class="form-group">
                 <label for="amount">Montante (R$)</label>
                 <div class="input-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    <path
+                      d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                    ></path>
                   </svg>
                   <input
                     type="number"
@@ -505,12 +604,22 @@
                   />
                 </div>
               </div>
-        
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="margin">Margem (%)</label>
                   <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <circle cx="12" cy="12" r="10"></circle>
                       <line x1="12" y1="8" x2="12" y2="16"></line>
                       <line x1="8" y1="12" x2="16" y2="12"></line>
@@ -524,11 +633,21 @@
                     />
                   </div>
                 </div>
-        
+
                 <div class="form-group">
                   <label for="units">Unidades</label>
                   <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <path d="M8 3v4"></path>
                       <path d="M4 11h16"></path>
                       <path d="M8 15h8"></path>
@@ -545,53 +664,93 @@
                   </div>
                 </div>
               </div>
-        
+
               <div class="result-container">
                 <p id="risk-analysis-show" class="premium-result"></p>
                 <p id="risk-analysis-total" class="premium-result total"></p>
               </div>
-        
-              <button type="submit" id="result-risk-analysis" class="premium-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+              <button
+                type="submit"
+                id="result-risk-analysis"
+                class="premium-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
                 Calcular Risco
               </button>
             </form>
           </div>
-          
+
           <div class="card-footer premium-footer">
             <span>Proteja seu capital</span>
           </div>
         </section>
 
-        <!-- Fund Projection Card -->
+        <!-- Card de Projeção de Fundos -->
         <section id="fund-projection" class="card premium-card">
           <div class="card-header premium-header">
-            <div class="icon-container premium-icon icon-fund"></div>
+            <div class="icon-container premium-icon icon-fund">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 20V10"></path>
+                <path d="M18 20V4"></path>
+                <path d="M6 20v-4"></path>
+              </svg>
+            </div>
             <h2 class="title">Projeção de Rendimentos</h2>
             <span class="premium-badge">Simulação Realista</span>
           </div>
-          
+
           <div class="card-body premium-body">
             <div class="description premium-description">
               <strong>Simulador de Investimentos</strong>
-              <span class="main-text"
-                >Projete rendimentos mensais e anuais baseados no valor do ativo e
-                dividendos. Ideal para planejar objetivos financeiros.</span
-              >
-              <span class="detail"
-                >Fórmula: (Rendimento × Quantidade) × Período</span
-              >
+              <span class="main-text">
+                Projete rendimentos mensais e anuais baseados no valor do ativo
+                e dividendos. Ideal para planejar objetivos financeiros.
+              </span>
+              <span class="detail">
+                Fórmula: (Rendimento × Quantidade) × Período
+              </span>
             </div>
-        
+
             <form id="fund-projection-form" class="premium-form">
               <div class="form-group">
                 <label for="quota-value">Valor do Ativo (R$)</label>
                 <div class="input-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    <path
+                      d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                    ></path>
                   </svg>
                   <input
                     type="number"
@@ -602,12 +761,22 @@
                   />
                 </div>
               </div>
-        
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="monthly-income">Rendimento (R$)</label>
                   <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <path d="M12 2v4"></path>
                       <path d="m16 6 3-3"></path>
                       <path d="M18 9h4"></path>
@@ -626,11 +795,21 @@
                     />
                   </div>
                 </div>
-        
+
                 <div class="form-group">
                   <label for="quantity-quota">Quantidade</label>
                   <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <path d="M8 3v4"></path>
                       <path d="M4 11h16"></path>
                       <path d="M8 15h8"></path>
@@ -647,50 +826,88 @@
                   </div>
                 </div>
               </div>
-        
+
               <div class="result-container">
                 <p id="total-investment" class="premium-result"></p>
                 <p id="monthly-earnings" class="premium-result total"></p>
               </div>
-        
-              <button type="submit" id="calculate-projection" class="premium-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+              <button
+                type="submit"
+                id="calculate-projection"
+                class="premium-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
                 Calcular Rendimentos
               </button>
             </form>
           </div>
-          
+
           <div class="card-footer premium-footer">
             <span>Planeje seu futuro</span>
           </div>
         </section>
 
-        <!-- Bazin Price Card (Décio Bazin) -->
+        <!-- Card de Preço Teto Bazin -->
         <section id="bazin-price" class="card premium-card">
           <div class="card-header premium-header">
-            <div class="icon-container premium-icon icon-bazin"></div>
+            <div class="icon-container premium-icon icon-bazin">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M4 20h16"></path>
+                <path d="M6 16v-4a6 6 0 0 1 12 0v4"></path>
+                <path d="M12 12v4"></path>
+              </svg>
+            </div>
             <h2 class="title">Preço Teto Bazin</h2>
             <span class="premium-badge">Método Comprovado</span>
           </div>
-          
+
           <div class="card-body premium-body">
             <div class="description premium-description">
               <strong>Método de Valuation</strong>
-              <span class="main-text"
-                >Determine o preço máximo justo para ações com base nos
-                dividendos, seguindo a estratégia do investidor Décio Bazin.</span
-              >
+              <span class="main-text">
+                Determine o preço máximo justo para ações com base nos
+                dividendos, seguindo a estratégia do investidor Décio Bazin.
+              </span>
               <span class="detail">Fórmula: Média dividendos ÷ (DY ÷ 100)</span>
             </div>
-        
+
             <form id="bazin-price-form" class="premium-form">
               <div class="form-row">
                 <div class="form-group">
                   <label for="dividend-yield">Dividend Yield (%)</label>
                   <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <circle cx="12" cy="12" r="10"></circle>
                       <line x1="12" y1="8" x2="12" y2="16"></line>
                       <line x1="8" y1="12" x2="16" y2="12"></line>
@@ -704,13 +921,25 @@
                     />
                   </div>
                 </div>
-        
+
                 <div class="form-group">
                   <label for="average-dividend">Média Dividendos (R$)</label>
                   <div class="input-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
                       <line x1="12" y1="1" x2="12" y2="23"></line>
-                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                      <path
+                        d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                      ></path>
                     </svg>
                     <input
                       type="number"
@@ -722,106 +951,171 @@
                   </div>
                 </div>
               </div>
-        
+
               <div class="result-container">
                 <p id="bazin-price-show" class="premium-result"></p>
               </div>
-        
+
               <button type="submit" id="calculate-bazin" class="premium-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
                 Calcular Preço Teto
               </button>
             </form>
           </div>
-          
+
           <div class="card-footer premium-footer">
             <span>Invista com sabedoria</span>
           </div>
         </section>
       </div>
 
+      <!-- Seção de Preço Graham -->
       <div class="math-content">
-        <!--  Graham Price Card (Benjamin Graham) -->
         <section id="graham-price" class="card premium-card">
-  <div class="card-header premium-header">
-    <div class="icon-container premium-icon icon-graham"></div>
-    <h2 class="title">Preço Teto Graham</h2>
-    <span class="premium-badge">Valor Intrínseco</span>
-  </div>
-  
-  <div class="card-body premium-body">
-    <div class="description premium-description">
-      <strong>Valor Intrínseco</strong>
-      <span class="main-text"
-        >Calcule o preço justo de ações conforme os princípios de Benjamin
-        Graham, considerando lucro e valor contábil por ação.</span
-      >
-      <span class="detail">Fórmula: √(22,5 × LPA × VPA)</span>
-    </div>
-
-    <form id="graham-price-form" class="premium-form">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="earnings-per-share">LPA (R$)</label>
-          <div class="input-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-            <input
-              type="number"
-              id="earnings-per-share"
-              placeholder="Exemplo: 5.00"
-              required
-              class="premium-input"
-            />
+          <div class="card-header premium-header">
+            <div class="icon-container premium-icon icon-graham">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <path d="M14 2v6h6"></path>
+                <path d="M8 13h8"></path>
+                <path d="M8 17h8"></path>
+                <path d="M10 9H8v2h2V9z"></path>
+              </svg>
+            </div>
+            <h2 class="title">Preço Teto Graham</h2>
+            <span class="premium-badge">Valor Intrínseco</span>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="book-value-per-share">VPA (R$)</label>
-          <div class="input-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-            <input
-              type="number"
-              id="book-value-per-share"
-              placeholder="Exemplo: 15.00"
-              required
-              class="premium-input"
-            />
+          <div class="card-body premium-body">
+            <div class="description premium-description">
+              <strong>Valor Intrínseco</strong>
+              <span class="main-text">
+                Calcule o preço justo de ações conforme os princípios de
+                Benjamin Graham, considerando lucro e valor contábil por ação.
+              </span>
+              <span class="detail">Fórmula: √(22,5 × LPA × VPA)</span>
+            </div>
+
+            <form id="graham-price-form" class="premium-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="earnings-per-share">LPA (R$)</label>
+                  <div class="input-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="12" y1="1" x2="12" y2="23"></line>
+                      <path
+                        d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                      ></path>
+                    </svg>
+                    <input
+                      type="number"
+                      id="earnings-per-share"
+                      placeholder="Exemplo: 5.00"
+                      required
+                      class="premium-input"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="book-value-per-share">VPA (R$)</label>
+                  <div class="input-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path
+                        d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                      ></path>
+                    </svg>
+                    <input
+                      type="number"
+                      id="book-value-per-share"
+                      placeholder="Exemplo: 15.00"
+                      required
+                      class="premium-input"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="result-container">
+                <p id="graham-price-show" class="premium-result"></p>
+              </div>
+
+              <button
+                type="submit"
+                id="calculate-graham"
+                class="premium-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                Calcular Preço Teto
+              </button>
+            </form>
           </div>
-        </div>
-      </div>
 
-      <div class="result-container">
-        <p id="graham-price-show" class="premium-result"></p>
-      </div>
-
-      <button type="submit" id="calculate-graham" class="premium-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-        </svg>
-        Calcular Preço Teto
-      </button>
-    </form>
-  </div>
-  
-  <div class="card-footer premium-footer">
-    <span>Baseado em fundamentos</span>
-  </div>
-</section>
+          <div class="card-footer premium-footer">
+            <span>Baseado em fundamentos</span>
+          </div>
+        </section>
       </div>
     </main>
+
     <!-- Scripts -->
     <script type="module" src="/scripts/main.js"></script>
     <script src="/scripts/navbar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
