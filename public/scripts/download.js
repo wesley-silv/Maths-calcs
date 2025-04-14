@@ -137,14 +137,14 @@ export function downloadPDF() {
         const quantity = safeParseNumber(op.quantity)
 
         return [
-          { text: safeFormatDate(op.date), style: 'centerAlign' },
-          op.description || { text: 'Sem descrição', style: 'missingData' },
+          { text: op.date, style: 'centerAlign' },
+          { text: op.description || 'Sem descrição', style: 'centerAlign' },
           { text: (op.ticker || '--').toUpperCase(), style: 'centerAlign' },
-          { text: safeFormatCurrency(value), style: 'rightAlign' },
-          { text: quantity.toString(), style: 'rightAlign' },
+          { text: op.value, style: 'rightAlign' },
+          { text: op.quantity, style: 'rightAlign' },
           {
-            text: safeFormatCurrency(result),
-            style: result >= 0 ? 'profit' : 'loss'
+            text: op.result,
+            style: op.result >= 0 ? 'profit' : 'loss'
           },
           {
             text: result >= 0 ? 'Lucro' : 'Prejuízo',
