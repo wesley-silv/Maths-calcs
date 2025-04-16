@@ -136,11 +136,6 @@ document
   .addEventListener('change', function () {
     const selectedOption = this.value
 
-    if (!selectedOption) {
-      alert('Selecione um formato válido para o download!')
-      return
-    }
-
     switch (selectedOption) {
       case 'pdf':
         downloadPDF()

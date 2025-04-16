@@ -1,6 +1,7 @@
 import { getOperations } from './operations.js'
+import { showModal } from './utils.js'
 
-// Funções auxiliares melhoradas
+// Entries validation
 const safeParseNumber = (value, defaultValue = 0) => {
   if (value === null || value === undefined) return defaultValue
   const num = typeof value === 'number' ? value : parseFloat(value)
@@ -88,12 +89,19 @@ export function downloadXLSX() {
   document.head.appendChild(script)
 }
 
+//  Logical for Download PDF
 export function downloadPDF() {
   const operations = getOperations()
 
-  if (!operations || operations.length === 0) {
-    alert('Nenhuma operação registrada para exportar!')
-    return
+  try {
+    if (!operations || operations.length === 0) {
+      throw new Error('Nenhuma operação registrada para exportar!')
+    }
+
+    showModal('Sucesso', 'PDF exportado com sucesso!', 'success')
+  } catch (error) {
+    showModal('Erro', error.message, 'error')
+    console.error('Erro ao exportar PDF:', error.message)
   }
 
   const script = document.createElement('script')
@@ -124,8 +132,8 @@ export function downloadPDF() {
           fillColor: '#2c3e50',
           alignment: 'center'
         },
-        profit: { color: 'green', bold: true },
-        loss: { color: 'red', bold: true },
+        profit: { color: '#00f', bold: true },
+        loss: { color: '#f00', bold: true },
         rightAlign: { alignment: 'right' },
         centerAlign: { alignment: 'center' },
         missingData: { color: '#999', fontStyle: 'italic' }
